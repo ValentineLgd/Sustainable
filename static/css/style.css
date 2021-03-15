@@ -14,11 +14,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-size:small;
     margin-left:10px;
-    float: right;
+    color: black;
 }
 
 .nav-link:hover {
     font-weight : 800;
+    color: black;
 }
 
 .navbar {
@@ -26,18 +27,29 @@ h1, h2, h3, h4, h5, h6 {
     padding-top:20px;
     padding-bottom:20px;
     width: 100%;
+    border-bottom :1px solid black;
+}
+.navbar-light .navbar-brand {
+    color: white;
 }
 
-.navbar a {
-    color: black;
+.navbar-brand:hover{
+    color:white;
 }
 
 .navbar-brand {
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    text-transform:uppercase;
     font-size: x-large;
-    font-weight: 800;
+    font-weight: 700;
     padding: 10px;
+    padding-left:5%;
+    padding-right:5%;
+    background-color:black;
+    color: white;
+    margin-left: 3%;
 }
+
 
 
 /*-----Hero image */
@@ -59,19 +71,95 @@ h1, h2, h3, h4, h5, h6 {
 
 /*---- About----*/
 
-.title-about {
+.page-about-content {
+    margin-bottom: 5%;
+    margin-top:5%;
+}
+
+.title-about h1 {
     text-align: center;
-    font-size: x-large;
+    font-size: 30px;
     font-weight: 900;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     text-transform: uppercase;
     margin-top:5%;
     margin-bottom:5%;   
+    background-color:black;
+    color:white;
+}
+
+@media only screen and (max-width: 992px) {
+.title-about h1 {
+    margin-top:10%;
+    margin-bottom:10%;   
+}
 }
 
 .text-about {
     text-align: center;
-    margin-top:5%;
+    margin-top:1%;
     margin-bottom:5%;   
     font-size: 18px;
+}
+
+.title-about h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top:10%;
+    margin-bottom:10%;   
+    background-color:black;
+    color:white;
+}
+
+@media only screen and (max-width: 993px) {
+.title-about h2 {
+    margin-top:5%;
+    margin-bottom:5%;   
+}}
+
+
+.title-about h2:hover {
+    background-color:white;
+    color:black;
+}
+
+@media only screen and (max-width: 992px) {
+.margin-what {
+    margin-left:13%;
+}
+}
+
+/* Footer */
+
+#footer-section {
+    border-top: 1px solid black;
+    padding-top:1%;
+}
+
+.footer-list {
+    text-align:center;
+    list-style-type: none;
+}
+
+.footer-list li {
+    display: inline;
+    font-size:13px;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color:black;
+}
+
+.footer-list li a i {
+    width: 35px;
+    height: 35px;
+    padding: 5px 15px;
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+    border-radius: 50%;
 }
