@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Padauk&display=swap');
+body {
+    font-family: 'Padauk', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*----------Navbar----------*/
+
+.nav-link {
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:small;
+    margin-left:10px;
+    float: right;
+}
+
+.nav-link:hover {
+    font-weight : 800;
+}
+
+.navbar {
+    background-color: #ffff;
+    padding-top:20px;
+    padding-bottom:20px;
+    width: 100%;
+}
+
+.navbar a {
+    color: black;
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+    font-size: x-large;
+    font-weight: 800;
+    padding: 10px;
+}
+
+
+/*-----Hero image */
+#hero-image img {
+    height:450px;
+    width:100%;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+#hero-image img {
+    height:300px;
+    max-width:500px;
+}}
+
+.container-fluid {
+    padding: 0;
+}
+
+/*---- About----*/
+
+.title-about {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top:5%;
+    margin-bottom:5%;   
+}
+
+.text-about {
+    text-align: center;
+    margin-top:5%;
+    margin-bottom:5%;   
+    font-size: 18px;
+}
