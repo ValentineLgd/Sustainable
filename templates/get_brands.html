@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="title">
+        <h1><strong>Start shopping</strong></h1>
+    </div>
+        <div class="container-fluid">
+            <div id="image-brand">
+                <img src="{{ url_for('static', filename='img/shopping_img.jpg') }}" alt="grass-in-cement"/>
+            </div> 
+        </div>
+    <div class="container-fluid">
+        <ul>
+            <div class="row justify-content-center">
+            {% for brand in brands %}
+                <div class="col-lg-4 col-md-10 frame-col">
+                    <li>
+                        <div class="title-brand">
+                            <h3>
+                                <strong>{{ brand.brand_name }}</strong> 
+                            </h3>
+                        </div>
+                        <div class="content-brand">
+                            <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
+                            <strong>Location: </strong>{{ brand.country }}<br>
+                            <strong>Category: </strong>{{ brand.category_name }}<br><br>
+                            <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
+                        </div>
+                    </li>
+                </div>
+            {% endfor %}
+            </div>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-12 content-brand-manage">
+                    Craving to <strong>add more details</strong> about your favorite brand?<br>
+                    Or worse : is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
+                    <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> - in order to create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
+                    <a class="btn btn-black-border-white" href="{{ url_for('get_brands') }}" role="button">Manage existing catalogue</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
