@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="title">
+        <h1><strong>Manage catalogue</strong></h1>
+        <div class="container-fluid">
+            <div class= "row justify-content-center">
+                <div class="col-lg-5 col-md-8 manage-catalogue-p">
+                    <p>
+                        This catalogue is an <strong>open catalogue</strong> - which is the reason why, we are willing to
+                        share with all our community & members the opportunity to <strong>contribuate</strong> with 
+                        their own knowledge regarding sustainable brands.<br><br>
+                        Do not hesitate to <strong>update</strong> or <strong>complete</strong> the existing catalogue 
+                        with your precious knowledge.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-8 col-manage">
+                    <a class="btn-manage" href="{{ url_for('add_brands') }}" role="button">
+                        Add a brand
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-8 col-manage">
+                    <a class="btn-manage" href="{{ url_for('manage_brands') }}" role="button">
+                        Edit a brand
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-8 col-manage">
+                    <a class="btn-manage" href="{{ url_for('manage_brands') }}" role="button">
+                        Delete a brand
+                    </a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div id="image-manage">
+                    <img src="{{ url_for('static', filename='img/manage_brand.jpg') }}" alt="clothes"/>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

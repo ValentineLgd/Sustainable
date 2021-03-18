@@ -263,3 +263,42 @@ ul {
     padding: 5px;
     padding-bottom:20px;
 }
+
+/* Manage catalogue */
+
+.col-manage {
+    border: 1px solid black;
+    margin: 3%;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.col-manage a {
+    text-decoration:none ;
+}
+
+.col-manage a:hover {
+    font-weight:900;
+    color: white;
+}
+
+.btn-manage {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#image-manage img {
+    height:500px;
+    width:100%;
+    background-size: cover;
+}
+
+.manage-catalogue-p {
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+}

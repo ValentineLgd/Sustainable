@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="title">
+        <h1><strong> Add a brand </strong></h1>
+    </div>
+    <form method="POST" action="{{ url_for('add_brands') }}">
+    <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-12">
+        <!--Bootstrap form template-->
+            <div class="form-group">
+                <label for="brand_name"><strong>Name</strong></label>
+                <input type="text" class="form-control" id="brand_name" name="brand_name" placeholder="Enter brand's name" required>
+            </div><br>
+            <div class="form-group">
+                <label for="website"><strong>Website</strong></label>
+                <input type="text" class="form-control" id="website" name="website" placeholder="Enter brand's website" required>
+            </div><br>
+            <div class="form-group">
+                <label for="country"><strong>Location</strong></label>
+                <input type="text" class="form-control" id="country" name="country" placeholder="Enter brand's location" required>
+            </div><br>
+            <div class="form-group">
+                <label for="description"><strong>Description</strong></label>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Describe the brand & why you love it" required></textarea>
+            </div><br>
+</div>
+</div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <button type="submit" class="btn">Add a brand</button>
+            </div>
+        </div>
+    </form>
+
+
+{% endblock %}
