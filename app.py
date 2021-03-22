@@ -51,6 +51,21 @@ def add_brands():
     return render_template("add_brands.html")
 
 
+@app.route("/edit_brands/<brand_id>", methods=["GET", "POST"])
+def edit_brands(brand_id):
+    if request.method == "POST":
+        submit = {
+            "country": request.form.get("country"),
+            "brand_name": request.form.get("brand_name"),
+            "description": request.form.get("description"),
+            "website": request.form.get("website"),
+        }
+        mongo.db.brands.update({"_id": ObjectId(brand_id)}, submit)
+        flash("Brand Successfully Updated")
+
+    brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
+    return render_template("edit_brands.html", brand=brand)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

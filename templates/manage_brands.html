@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
     <div class="title">
         <h1><strong>Manage catalogue</strong></h1>
         <div class="container-fluid">
@@ -21,11 +20,13 @@
                         Add a brand
                     </a>
                 </div>
+                {% for brand in brands %}
                 <div class="col-lg-3 col-sm-8 col-manage">
-                    <a class="btn-manage" href="{{ url_for('manage_brands') }}" role="button">
+                    <a class="btn-manage" href="{{ url_for('edit_brands') }}" role="button">
                         Edit a brand
                     </a>
                 </div>
+                {% endfor %}
                 <div class="col-lg-3 col-sm-8 col-manage">
                     <a class="btn-manage" href="{{ url_for('manage_brands') }}" role="button">
                         Delete a brand
@@ -37,7 +38,6 @@
                     <img src="{{ url_for('static', filename='img/manage_brand.jpg') }}" alt="clothes"/>
                 </div> 
             </div>
-
         </div>
     </div>
 

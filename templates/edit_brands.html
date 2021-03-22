@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="title">
+        <h1><strong> Edit brand </strong></h1>
+    </div>
+
+        <form method="POST" action="{{ url_for('edit_brands', brand_id=brand._id) }}">
+    <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-12">
+        <!--Bootstrap form template-->
+            <div class="form-group">
+                <label for="brand_name"><strong>Name</strong></label>
+                <input type="text" class="form-control" id="brand_name" name="brand_name" value= "{{ brand.brand_name }}" placeholder="Enter brand's name" required>
+            </div><br>
+            <div class="form-group">
+                <label for="website"><strong>Website</strong></label>
+                <input type="text" class="form-control" id="website" name="website" value="{{ brand.website }}" required>
+            </div><br>
+            <div class="form-group">
+                <label for="country"><strong>Location</strong></label>
+                <input type="text" class="form-control" id="country" name="country" value="{{ brand.country }}" required>
+            </div><br>
+            <div class="form-group">
+                <label for="description"><strong>Description</strong></label>
+                <textarea class="form-control" id="description" name="description" rows="3" required>
+                    {{- brand.description -}}
+                </textarea>
+            </div><br>
+</div>
+</div>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <a href="{{ url_for('get_brands') }}" class="btn">
+                            Cancel
+                </a>
+                <button type="submit" class="btn">Edit</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
