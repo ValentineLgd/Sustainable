@@ -68,12 +68,12 @@ def edit_brands(brand_id):
 
 
 
-@app.route("/delete_brands/<brand_id>")
-def delete_brands(brand_id):
+@app.route("/delete_brand/<brand_id>")
+def delete_brand(brand_id):
     mongo.db.brands.remove({"_id": ObjectId(brand_id)})
     flash("Brand Successfully Deleted")
     return redirect(url_for("get_brands"))
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
