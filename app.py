@@ -35,7 +35,6 @@ def manage_brands():
     return render_template("manage_brands.html")
 
 
-
 @app.route("/add_brands", methods=["GET", "POST"])
 def add_brands():
     if request.method == "POST":
@@ -62,10 +61,19 @@ def edit_brands(brand_id):
         }
         mongo.db.brands.update({"_id": ObjectId(brand_id)}, submit)
         flash("Brand Successfully Updated")
+        return redirect(url_for("get_brands"))
 
     brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
     return render_template("edit_brands.html", brand=brand)
 
+
+
+@app.route("/delete_brands/<brand_id>")
+def delete_brands(brand_id):
+    mongo.db.brands.remove({"_id": ObjectId(brand_id)})
+    flash("Brand Successfully Deleted")
+    return redirect(url_for("get_brands"))
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
