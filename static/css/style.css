@@ -228,8 +228,7 @@ ul {
     margin-top: 5%;
     margin-left:5%;
     margin-right:5%;
-    padding: 25px;
-    border-radius: 3%;
+    padding: 15px;
 }
 
 .container-fluid ul {
@@ -293,8 +292,8 @@ ul {
     text-transform: uppercase;
 }
 
-#image-manage img {
-    height:500px;
+.image-manage img {
+    height:100%;
     width:100%;
     background-size: cover;
 }
@@ -302,5 +301,12 @@ ul {
 .manage-catalogue-p {
     text-align: center;
     border: 2px solid black;
-    padding: 20px;
+    padding:30px;
+    background-color: black;
+    color:white;
+}
+
+.p-catalogue-1 {
+    border: 2px solid white;
+    padding:5px;
 }

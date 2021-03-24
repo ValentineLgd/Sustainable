@@ -26,23 +26,16 @@
                             <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
                         </div>
                     </li>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <a class="btn" href="{{ url_for('delete_brand', brand_id=brand._id) }}">Delete</a>
+                            <a class="btn" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
             </div>
         </ul>
-    </div>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-12 content-brand-manage">
-                    Craving to <strong>add more details</strong> about your favorite brand?<br>
-                    Or worse : is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
-                    <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> - in order to create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
-                    <a class="btn btn-black-border-white" href="{{ url_for('manage_brands') }}" role="button">Manage existing catalogue</a>
-            </div>
-
-        </div>
-
-
     </div>
 
 
