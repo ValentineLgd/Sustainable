@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="title">
-        <h1><strong>About Us</strong></h1>
+        <h1><strong>About Us <i class="far fa-comment-dots"></i></strong></h1>
     </div>
-    <div id="image-hero">
-            <img src="{{ url_for('static', filename='img/hero.jpg') }}" alt="clothes"/>
-    </div> 
+        <div class="container-fluid img-outer">
+            <div class="image image-about">
+                <div class="cover-about-text">
+                    <h2>Ethic</h2>
+                    <h2>Ecology</h2>
+                    <h2>Transparence</h2>
+                </div>
+            </div>
+        </div>
         <div class ="page-about-content">
         <div class="container-fluid">
             <div class="row justify-content-center">

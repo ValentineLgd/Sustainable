@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="title">
-        <h1><strong> Edit brand </strong></h1>
+        <h1><strong> Edit brand <i class="fas fa-pen-square"></i></strong></h1>
     </div>
 
         <form method="POST" action="{{ url_for('edit_brands', brand_id=brand._id) }}">
