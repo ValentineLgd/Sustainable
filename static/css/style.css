@@ -95,6 +95,18 @@ ul {
     margin-left: 3%;
 }
 
+
+@media only screen and (max-width: 500px) {
+.navbar-brand {
+    padding: 0px;
+    padding-left:0px;
+    padding-right:0px;
+    background-color:black;
+    color: white;
+    margin-left: 0px;
+}
+}
+
 /*-----Hero image */
 
 #image-hero img {
@@ -154,8 +166,8 @@ ul {
 }
 
 @media only screen and (max-width: 992px) {
-.title-about h1 {
-    margin-top:10%;
+.title h1 {
+    margin-top:50%;
     margin-bottom:10%;   
 }
 }
@@ -306,11 +318,63 @@ ul {
     position: absolute;
 }
 
+
 .cover-text-2 {
     height: 100px;
     top: 130px;
     left: 150px;
 
+}
+
+.description-brand ul {
+    margin-left:25%;
+}
+
+@media only screen and (max-width: 992px) {
+.cover-text {
+    left: 0px;
+}
+.cover-text-2 {
+    left: 170px;
+}
+.description-brand ul {
+    margin-left:1%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.cover-text {
+    width: 150px;
+    height: 10px;
+    top: 230px;
+    left: 10px;
+    padding-left: 0px;
+    padding-bottom: 130px;
+}
+.cover-text-2 {
+    height: 100px;
+    top: 130px;
+    left: 140px;
+}
+
+.image-getbrands {
+    height: 350px;
+    background-position: center;
+}
+
+.description-brand ul {
+    margin-left:5%;
+}}
+
+.description-brand {
+    background-color: black;
+    padding-top:10px;
+    color:white;
+    margin-top:5%;
+}
+
+.align {
+    text-align: center;
 }
 
 /* Manage catalogue */
