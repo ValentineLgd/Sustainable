@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Padauk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Raleway&display=swap');
 body {
-    font-family: 'Padauk', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+p {
+    font-size:15px;
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: 'Indie FLower', sans-serif;
+}
+
+h2 {
+    font-family: 'Indie Flower', sans-serif;
 }
 
 ul {
@@ -15,7 +23,7 @@ ul {
     border:1px solid black;
     background-color:white;
     font-size: 14px;
-    font-family : 'Montserrat', sans-serif;
+    font-family : 'Indie Flower', sans-serif;
     margin-top:3%;
     font-weight: 800;
 }
@@ -45,7 +53,7 @@ ul {
 
 .nav-link {
     letter-spacing: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size:small;
     margin-left:10px;
     color: black;
@@ -73,7 +81,7 @@ ul {
 
 .navbar-brand {
     letter-spacing: 5px;
-    text-transform:uppercase;
+    font-family: "Indie Flower", sans-serif;
     font-size: x-large;
     font-weight: 700;
     padding: 10px;
@@ -85,14 +93,29 @@ ul {
 }
 
 /*-----Hero image */
-#image img {
-    height:450px;
-    width:100%;
+
+.image-hero {
+    background-image: url('/static/img/hero.jpg');
     background-size: cover;
+    height:600px;
+    width:100%;
+    background-repeat: no-repeat;
+    animation-name: hero-zoom;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
 
 @media only screen and (max-width: 500px) {
-#image img {
+.image-hero {
     height:300px;
     max-width:500px;
 }}
@@ -110,6 +133,8 @@ ul {
     width:100%;
     background-size: cover;
 }
+
+
 
 @media only screen and (max-width: 500px) {
 #image-brand img {
@@ -130,7 +155,6 @@ ul {
     font-size: 30px;
     font-weight: 900;
     letter-spacing: 7px;
-    text-transform: uppercase;
     margin-top:5%;
     margin-bottom:5%;   
     background-color:black;
@@ -156,7 +180,6 @@ ul {
     text-align: center;
     font-weight: 900;
     letter-spacing: 5px;
-    text-transform: uppercase;
     margin-top:10%;
     margin-bottom:10%;   
     background-color:black;
@@ -219,7 +242,6 @@ ul {
 .title-brand h3 {
     background-color:black;
     color:white;
-    font-size: 18px;
     text-align: center;
 }
 
