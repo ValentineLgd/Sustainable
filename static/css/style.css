@@ -165,12 +165,28 @@ ul {
     color:white;
 }
 
+@media only screen and (min-width: 1100px) {
+.image-getbrands {
+    background-attachment: fixed;
+}}
+
 @media only screen and (max-width: 992px) {
 .title h1 {
-    margin-top:50%;
+    margin-top:20%;
     margin-bottom:10%;   
 }
+.title h2 {
+    margin-top:5%;
+    margin-bottom:5%;   
 }
+.title h2:hover {
+    background-color:white;
+    color:black;
+}
+
+.margin-what {
+    margin-left:13%;
+}}
 
 .text-about {
     text-align: center;
@@ -188,24 +204,6 @@ ul {
     margin-bottom:10%;   
     background-color:black;
     color:white;
-}
-
-@media only screen and (max-width: 993px) {
-.title h2 {
-    margin-top:5%;
-    margin-bottom:5%;   
-}}
-
-
-.title h2:hover {
-    background-color:white;
-    color:black;
-}
-
-@media only screen and (max-width: 992px) {
-.margin-what {
-    margin-left:13%;
-}
 }
 
 /* Footer */
@@ -296,7 +294,6 @@ ul {
     height: 350px;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 
@@ -343,7 +340,11 @@ ul {
 }
 
 @media only screen and (max-width: 500px) {
-.cover-text {
+
+.title h1 {
+    margin-top:30%;
+}
+    .cover-text {
     width: 150px;
     height: 10px;
     top: 230px;
