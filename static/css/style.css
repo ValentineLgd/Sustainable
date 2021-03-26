@@ -96,6 +96,22 @@ ul {
     margin-left: 3%;
 }
 
+.dropdown-item {
+    font-family: "Indie Flower", sans-serif;
+}
+
+.dropdown-item:hover {
+    font-weight:900;
+}
+
+/* Code inspired from : https://stackoverflow.com/questions/49204071/how-to-change-navbar-dropdown-click-color-bootstrap-using-bootswatch-theme*/
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    background-color: black;
+}
+
+/*End of credit*/
+
 @media only screen and (max-width: 500px) {
 .navbar-brand {
     padding: 0px;
@@ -467,15 +483,29 @@ ul {
 }
 }
 
+@media only screen and (max-width: 550px) and (min-width: 500px) {
+.cover-text {
+    width: 150px;
+    top: 30%;
+    left: 10px;
+    padding-left: 0px;
+    padding-bottom: 130px;
+}
+
+.cover-about-text {
+    left:0px;
+}
+}
+
 @media only screen and (max-width: 500px) {
 
 .base {
     margin-top:30%;
 }
 .cover-text {
-    width: 150px;
     height: 10px;
     top: 240px;
+    width: 150px;
     left: 10px;
     padding-left: 0px;
     padding-bottom: 130px;
@@ -575,10 +605,13 @@ ul {
     padding: 50px;
 }
 
+/* Add & Edit buttons */
+
 .btn-edit {
     background-image: url('/static/img/sky.jpg');
     color: white;
     width: 100px;
+    font-weight: 400;
     background-position: center;
 }
 
@@ -586,28 +619,35 @@ ul {
     background-image: url('/static/img/spring.jpg');
     color: black;
     width: 150px;
+    font-weight:900;
     background-position: center;
-}
-.btn-edit:hover {
-    text-decoration: underline;
-}
-.btn-add:hover {
-    text-decoration: underline;
-    color:black;
 }
 
 
 .vertical-center {
-    margin: auto;
+  margin: auto;
   position: absolute;
   top: 92%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.vertical-center-manage {
-  position: relative;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 
+/**Webkit effect inspired from https://www.web-eau.net/blog/15-effets-css3-pour-vos-images **/
+
+@media only screen and (min-width: 1050px) {
+.btn-color {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+
+.btn-color:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+    cursor:pointer;
+}
+.btn-add:hover{
+    color:black;
+}}

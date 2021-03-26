@@ -40,7 +40,7 @@
                             <div class="row justify-content-center">
                                 <div class="vertical-center">
                                     <a href="{{ url_for('delete_brand', brand_id=brand._id) }}"><button class="btn" type="submit" data-toggle="modal" data-target="#myModal">Delete</button></a>
-                                    <a class="btn btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
+                                    <a class="btn btn-color btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
         <div class="row justify-content-center">
             <div class="col-12 content-brand-manage">
                     <p class="p-large">Want to share your own favorite brand?</p>
-                    <a class="btn btn-add" href="{{ url_for('add_brands') }}" role="button">Add a brand</a>
+                    <a class="btn btn-color btn-add" href="{{ url_for('add_brands') }}" role="button">Add a brand</a>
             </div>
         </div>
 
