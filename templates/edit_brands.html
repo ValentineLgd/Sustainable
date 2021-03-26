@@ -4,9 +4,9 @@
         <h1><strong> Edit brand <i class="fas fa-pen-square"></i></strong></h1>
     </div>
 
-        <form method="POST" action="{{ url_for('edit_brands', brand_id=brand._id) }}">
-    <div class="row justify-content-center">
-    <div class="col-lg-6 col-md-12">
+<div class="row justify-content-center">
+<div class="form-border col-lg-6 col-md-12">
+<form method="POST" action="{{ url_for('edit_brands', brand_id=brand._id) }}">
         <!--Bootstrap form template-->
             <div class="form-group">
                 <label for="brand_name"><strong>Name</strong></label>
@@ -26,16 +26,16 @@
                     {{- brand.description -}}
                 </textarea>
             </div><br>
-</div>
-</div>
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="vertical-center">
                 <a href="{{ url_for('get_brands') }}" class="btn">
                             Cancel
                 </a>
-                <button type="submit" class="btn">Edit</button>
+                <button type="submit" class="btn btn-edit" data-toggle="modal" data-target="#myModal">Edit</button>
             </div>
         </div>
-    </form>
+</form>
+</div>
+</div>
 
 {% endblock %}

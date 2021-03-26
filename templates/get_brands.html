@@ -26,30 +26,32 @@
         </div>
     </div>
     <div class="container-fluid">
-        <ul>
-            <div class="row justify-content-center">
-            {% for brand in brands %}
-                <div class="col-lg-4 col-md-10 frame-col">
-                    <li>
-                        <div class="title-brand">
-                            <h3>
-                                <strong>{{ brand.brand_name }}</strong> 
-                            </h3>
+            <div>
+                <ul>
+                    <div class="row justify-content-center">
+                    {% for brand in brands %}
+                        <div class="col-lg-4 col-md-10 frame-col">
+                            <li>
+                                <div class="title-brand">
+                                    <h3>
+                                        <strong>{{ brand.brand_name }}</strong> 
+                                    </h3>
+                                </div>
+                                <div class="content-brand">
+                                    <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
+                                    <strong>Location: </strong>{{ brand.country }}<br>
+                                    <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
+                                </div>
+                            </li>
                         </div>
-                        <div class="content-brand">
-                            <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
-                            <strong>Location: </strong>{{ brand.country }}<br>
-                            <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
-                        </div>
-                    </li>
-                </div>
-            {% endfor %}
-            </div>
-        </ul>
-    </div>
-    <div class="container-fluid">
+                    {% endfor %}
+                    </div>
+                </ul>
+            </div>  
+        </div>
+        <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 content-brand-manage">
+        <div class="col-12 content-brand-manage">
                     <p>Craving to <strong>add more details</strong> about your favorite brand?<br>
                     Or worse : is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
                     <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> - in order to create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
