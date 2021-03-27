@@ -260,8 +260,12 @@ ul {
 #myModal {
     color:black;
     text-align:center;
-    margin-top:100px;
+    top:100px;
     font-family: "Indie Flower", sans-serif;
+}
+
+#modalDelete {
+    top:20%;
 }
 
 .close span {
@@ -324,6 +328,10 @@ ul {
 
 /* Get Brands */
 
+.form-inline {
+    margin-top:3%;
+}
+
 .title-brand h3 {
     background-color:black;
     color:white;
@@ -337,7 +345,6 @@ ul {
     margin-right:5%;
     padding: 15px;
 }
-
 
 @media only screen and (max-width: 500px) {
 .frame-col p {
@@ -619,7 +626,6 @@ ul {
     background-image: url('/static/img/spring.jpg');
     color: black;
     width: 150px;
-    font-weight:900;
     background-position: center;
 }
 
@@ -628,6 +634,7 @@ ul {
   margin: auto;
   position: absolute;
   top: 92%;
+  padding-bottom:5%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -647,7 +654,9 @@ ul {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
     cursor:pointer;
+    font-weight:900;
 }
 .btn-add:hover{
     color:black;
+    font-weight:900;
 }}

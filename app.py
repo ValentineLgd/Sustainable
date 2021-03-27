@@ -29,6 +29,13 @@ def get_brands():
     return render_template("get_brands.html", brands=brands)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    brands = list(mongo.db.brands.find({"$text": {"$search": query}}))
+    return render_template("get_brands.html", brands=brands)
+
+
 @app.route("/add_brands", methods=["GET", "POST"])
 def add_brands():
     if request.method == "POST":
