@@ -700,3 +700,16 @@ ul {
 .section-log {
     margin-top:5%;
 }
+
+.text-label {
+    font-family: "Indie Flower", sans-serif;
+    font-size:20px;
+}
+
+.input-design {
+    margin-left:5px;
+    border-radius:5px;
+    border: 3px solid black;
+    background-color: black;
+    color:white;
+}

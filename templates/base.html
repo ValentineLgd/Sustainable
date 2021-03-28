@@ -27,12 +27,6 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ url_for('get_brands') }}">Sustainable brands</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Log In</a>
-            </li>
             {% if session.user %}
             <li><a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Log Out</a></li>
                   <li class="nav-item dropdown">
@@ -44,6 +38,13 @@
             <a class="dropdown-item" href="{{ url_for('add_brands') }}">Add a brand</a>
             </div>
         </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Log In</a>
+            </li>
             {% endif %}
         </ul>
         </div>
