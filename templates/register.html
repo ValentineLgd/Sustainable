@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--Code inspired from Code institute Mini Project-->
+
+    <div class="title">
+        <h1><strong> Register <i class="fas fa-user-plus"></i></strong></h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="form-border col-lg-6 col-md-12">
+        <form method="POST" action="{{ url_for('register') }}">
+                <div class="row justify-content-center">
+					<div class="input-field form-group">
+						<input id="username" name="username" type="text" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+						<label for="username">Username</label>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="input-field form-group">
+                        <input id="password" name="password" type="password" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <button type="submit" class="btn">
+                        Register <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+        </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 section-log">
+            <p class="align">
+                Already Registered?
+                <a href="#" class="btn"">Log In</a>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -36,6 +37,63 @@ def search():
     return render_template("get_brands.html", brands=brands)
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists : please try again ")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful! Welcome, {}!".format(
+                            request.form.get("username")))
+        return redirect(url_for("add_brands"))
+
+    return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}!".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "get_brands"))
+            else:
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
+
+@app.route("/logout")
+def logout():
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/add_brands", methods=["GET", "POST"])
 def add_brands():
     if request.method == "POST":
@@ -44,9 +102,10 @@ def add_brands():
             "brand_name": request.form.get("brand_name"),
             "description": request.form.get("description"),
             "website": request.form.get("website"),
+            "created_by": session["user"]
         }
         mongo.db.brands.insert_one(brand)
-        flash("Brand Successfully Added")
+        flash("Brand Successfully Added! Thank you for your help!")
         return redirect(url_for("get_brands"))
     return render_template("add_brands.html")
 
@@ -61,7 +120,7 @@ def edit_brands(brand_id):
             "website": request.form.get("website"),
         }
         mongo.db.brands.update({"_id": ObjectId(brand_id)}, submit)
-        flash("Brand Successfully Updated")
+        flash("Brand Successfully Updated! Thank you for your help!")
         return redirect(url_for("manage_brands"))
 
     brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})

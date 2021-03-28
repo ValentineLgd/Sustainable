@@ -37,12 +37,14 @@
                                     <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
                                 </div>
                             </li>
+                            {% if session.user|lower == brand.created_by|lower %}
                             <div class="row justify-content-center">
                                 <div class="vertical-center">
                                     <a href="{{ url_for('delete_brand', brand_id=brand._id) }}"><button class="btn" type="submit" data-toggle="modal" data-target="#myModal">Delete</button></a>
                                     <a class="btn btn-color btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
                                 </div>
                             </div>
+                            {% endif %}
                         </div>
                         {% endfor %}
                     </div>

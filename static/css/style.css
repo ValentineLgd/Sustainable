@@ -433,7 +433,7 @@ ul {
     padding-top:15px;
     background-color: rgba(255, 255, 255, 0.5);
     border:1px solid black;
-    top: 400px;
+    top: 350px;
     left: 140px;
     position: absolute;
 }
@@ -694,3 +694,9 @@ ul {
     color:black;
     font-weight:900;
 }}
+
+/* Register */
+
+.section-log {
+    margin-top:5%;
+}
