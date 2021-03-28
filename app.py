@@ -37,30 +37,6 @@ def search():
     return render_template("get_brands.html", brands=brands)
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            flash("Username already exists : please try again ")
-            return redirect(url_for("register"))
-
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
-
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful! Welcome, {}!".format(
-                            request.form.get("username")))
-        return redirect(url_for("add_brands"))
-
-    return render_template("register.html")
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -74,7 +50,7 @@ def login():
                         flash("Welcome, {}!".format(
                             request.form.get("username")))
                         return redirect(url_for(
-                            "get_brands"))
+                            "manage_brands"))
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
@@ -94,20 +70,29 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/manage_brands")
+def manage_brands():
+    brands = mongo.db.brands.find()
+    return render_template("manage_brands.html", brands=brands)
+
+
 @app.route("/add_brands", methods=["GET", "POST"])
 def add_brands():
     if request.method == "POST":
         brand = {
             "country": request.form.get("country"),
             "brand_name": request.form.get("brand_name"),
+            "category_name": request.form.get("category_name"),
             "description": request.form.get("description"),
             "website": request.form.get("website"),
             "created_by": session["user"]
         }
         mongo.db.brands.insert_one(brand)
         flash("Brand Successfully Added! Thank you for your help!")
-        return redirect(url_for("get_brands"))
-    return render_template("add_brands.html")
+        return redirect(url_for("manage_brands"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_brands.html", categories=categories)
 
 
 @app.route("/edit_brands/<brand_id>", methods=["GET", "POST"])
@@ -116,29 +101,50 @@ def edit_brands(brand_id):
         submit = {
             "country": request.form.get("country"),
             "brand_name": request.form.get("brand_name"),
+            "category_name": request.form.get("category_name"),
             "description": request.form.get("description"),
             "website": request.form.get("website"),
+            "created_by": session["user"]
         }
         mongo.db.brands.update({"_id": ObjectId(brand_id)}, submit)
         flash("Brand Successfully Updated! Thank you for your help!")
         return redirect(url_for("manage_brands"))
 
     brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
-    return render_template("edit_brands.html", brand=brand)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_brands.html", brand=brand, categories=categories)
 
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists : please try again ")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful! Welcome, {}!".format(
+                            request.form.get("username")))
+        return redirect(url_for("manage_brands"))
+
+    return render_template("register.html")
 
 
 @app.route("/delete_brand/<brand_id>")
 def delete_brand(brand_id):
     mongo.db.brands.remove({"_id": ObjectId(brand_id)})
     flash("Brand Successfully Deleted")
-    return redirect(url_for("get_brands"))
-
-
-@app.route("/manage_brands")
-def manage_brands():
-    brands = mongo.db.brands.find()
-    return render_template("manage_brands.html", brands=brands)
+    return redirect(url_for("manage_brands"))
+    
 
 
 if __name__ == "__main__":

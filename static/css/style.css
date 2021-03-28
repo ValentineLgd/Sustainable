@@ -225,13 +225,9 @@ ul {
 }
 
 .title h2 {
-    margin-top:5%;
     margin-bottom:5%;   
 }
-
-.margin-what {
-    margin-left:13%;
-}}
+}
 
 .title h2:hover {
     background-color:white;
@@ -242,6 +238,7 @@ ul {
     text-align: center;
     margin-top:1%;
     margin-bottom:5%;   
+    margin-left:2%;
     font-size: 18px;
 }
 
@@ -250,7 +247,7 @@ ul {
     text-align: center;
     font-weight: 900;
     letter-spacing: 5px;
-    margin-top:10%;
+    margin-top:5%;
     margin-bottom:10%;   
     background-color:black;
     color:white;
@@ -361,6 +358,11 @@ ul {
     margin-left:5%;
     margin-right:5%;
     padding: 15px;
+    height: 450px;
+}
+
+.frame-col-get {
+    height:400px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -376,7 +378,7 @@ ul {
 
 .content-brand {
     margin-top:5%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     font-size: 14px;
 }
 
@@ -390,6 +392,10 @@ ul {
     background-color:black;
     color:white;
     padding: 30px;
+}
+
+.createdby {
+    text-align:right;
 }
 
 .together-word {
@@ -621,6 +627,11 @@ ul {
     color:white;
 }
 
+.manage-catalogue-p-1 {
+    
+    padding-top:7%;
+}
+
 .p-catalogue-1 {
     border: 2px solid white;
     padding:5px;
@@ -656,11 +667,17 @@ ul {
 
 .vertical-center {
   margin: auto;
+  margin-top:3%;
+  margin-bottom:3%;
   position: absolute;
-  top: 92%;
+  top: 90%;
   padding-bottom:5%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.vertical-center-form {
+    top:92%;
 }
 
 .btn-small {

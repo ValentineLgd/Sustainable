@@ -2,7 +2,7 @@
 {% block content %}
 
     <div class="title">
-        <h1><strong>Start shopping <i class="fas fa-shopping-cart"></i></strong></h1>
+        <h1><strong>Sustainables brands catalogue <i class="fas fa-shopping-cart"></i></strong></h1>
     </div>
         <div class="container-fluid img-outer">
             <div class="image image-getbrands">
@@ -47,7 +47,7 @@
                 <ul>
                     <div class="row justify-content-center">
                     {% for brand in brands %}
-                        <div class="col-lg-4 col-md-10 frame-col">
+                        <div class="col-lg-4 col-md-10 frame-col frame-col-get">
                             <li>
                                 <div class="title-brand">
                                     <h3>
@@ -57,8 +57,12 @@
                                 <div class="content-brand">
                                     <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
                                     <strong>Location: </strong>{{ brand.country }}<br>
+                                    <strong>Category: </strong>{{ brand.category_name }}<br>
                                     <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
                                 </div>
+                            </li>
+                            <li>
+                                <p class="createdby"> <strong>created by:</strong> <em>{{ brand.created_by }} </em></p>
                             </li>
                         </div>
                     {% endfor %}
@@ -69,16 +73,17 @@
         <div class="container-fluid">
         <div class="row justify-content-center">
         <div class="col-12 content-brand-manage">
-                    <p>Craving to <strong>add more details</strong> about your favorite brand?<br>
-                    Or worse : is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
-                    <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> - in order to create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
-                    <a class="btn btn-black-border-white" href="{{ url_for('manage_brands') }}" role="button">Manage existing catalogue</a>
-            </div>
-
+                    Is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
+                    <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> 
+                        <strong>Register</strong> today to complete the catalogue & create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
+                    <a class="btn" href="{{ url_for('register') }}" role="button">Register</a>
+            <p class="align">
+                <br>Already Registered?
+                <a href="{{ url_for('login') }}" class="btn btn-black-border-white"">Log In</a>
+            </p>
         </div>
-
-
     </div>
+                </div>
 
 
 {% endblock %}

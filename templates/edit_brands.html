@@ -21,13 +21,26 @@
                 <input type="text" class="form-control" id="country" name="country" value="{{ brand.country }}" required>
             </div><br>
             <div class="form-group">
+				<label for="category_name"><strong>Category</strong></label>
+				<select id="category_name" class="form-control" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Category</option>
+                        {% for category in categories %}
+                            {% if category.category_name == brand.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                </select>
+			</div><br>
+            <div class="form-group">
                 <label for="description"><strong>Description</strong></label>
                 <textarea class="form-control" id="description" name="description" rows="3" required>
                     {{- brand.description -}}
                 </textarea>
             </div><br>
         <div class="row justify-content-center">
-            <div class="vertical-center">
+            <div class="vertical-center-form">
                 <a href="{{ url_for('get_brands') }}" class="btn">
                             Cancel
                 </a>
