@@ -297,6 +297,10 @@ ul {
     margin-top: 5%;
 }
 
+#footer-section ul {
+    margin-top:5%;
+}
+
 .footer-list {
     border-top: 2px solid black;
     text-align:center;
