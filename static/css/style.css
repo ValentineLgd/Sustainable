@@ -115,6 +115,7 @@ ul {
 
 @media only screen and (max-width: 500px) {
 .navbar-brand {
+    font-size:18px;
     padding: 0px;
     padding-left:0px;
     padding-right:0px;
@@ -285,7 +286,7 @@ ul {
 
 
 #footer-section {
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
 #footer-section ul {
