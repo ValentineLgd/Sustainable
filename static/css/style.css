@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Raleway&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
 }
@@ -409,6 +417,7 @@ ul {
 
 .image-getbrands {
     background-image: url('/static/img/shopping_img.jpg');
+    position:relative;
 }
 
 .image-about {
@@ -429,28 +438,22 @@ ul {
     padding-top:15px;
     background-color: rgba(255, 255, 255, 0.5);
     border:1px solid black;
-    top: 350px;
-    left: 140px;
+    top: 5%;
+    left: 3%;
     position: absolute;
 }
 
-
 .cover-text-2 {
     height: 100px;
-    top: 130px;
-    left: 150px;
-
+    top: 45%;
+    left: 10%;
+    position: absolute;
 }
 
 .description-brand ul {
     margin-left:25%;
 }
 
-
-@media only screen and (min-width:992px) and (max-width: 1200px) {
-.cover-text {
-    top:20%;
-}}
 
 @media only screen and (max-width: 1200px) {
 .cover-about-text {
@@ -477,19 +480,6 @@ ul {
     font-size:16px;
 }
 }
-@media only screen and (max-width: 550px) and (min-width: 410px) {
-.cover-text {
-    width: 150px;
-    top: 40%;
-    left: 10px;
-    padding-left: 0px;
-    padding-bottom: 130px;
-}
-
-.cover-about-text {
-    left:0px;
-}
-}
 
 @media only screen and (max-width: 500px) {
 .cover-about-text {
@@ -510,36 +500,21 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
 
-}}
-
-@media only screen and (max-width: 992px) {
-.cover-text {
-    left: 0px;
 }
-.cover-text-2 {
-    left: 170px;
-}
-.description-brand ul {
-    margin-left:1%;
-}
-}
-
-@media only screen and (max-width: 500px) {
 
 .base {
     margin-top:30%;
 }
 .cover-text {
     height: 10px;
-    top: 260px;
     width: 150px;
-    left: 10px;
+    left: 3%;
     padding-left: 0px;
     padding-bottom: 130px;
 }
 .cover-text-2 {
     height: 100px;
-    top: 160px;
+    top: 50%;
     left: 30PX;
 }
 
@@ -552,6 +527,14 @@ ul {
     margin-left:5%;
 }}
 
+
+@media only screen and (max-width: 992px) {
+.description-brand ul {
+    margin-left:1%;
+}
+
+}
+
 .description-brand {
     background-color: black;
     padding-top:10px;
@@ -562,18 +545,6 @@ ul {
 .align {
     text-align: center;
 }
-
-.cover-text-2 {
-    top:150px;
-}
-
-@media only screen and (max-width: 420px) and (min-width: 400px)  {
-.cover-text {
-    top:280px;
-}
-.cover-text-2 {
-    top:150px;
-}}
 
 /* Manage catalogue */
 
