@@ -1,3 +1,5 @@
+
+
 /* Code from : https://stackoverflow.com/questions/35965321/flashing-message-in-flask-on-a-bootstrap-modal */
 
 $(document).ready(function() {
@@ -10,3 +12,4 @@ $(document).ready(function() {
 
 
 $('#modalDelete').modal(options)
+

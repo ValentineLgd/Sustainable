@@ -24,6 +24,7 @@ def about():
     return render_template("about.html")
 
 
+
 @app.route("/get_brands")
 def get_brands():
     brands = mongo.db.brands.find()
