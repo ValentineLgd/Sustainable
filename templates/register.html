@@ -11,14 +11,14 @@
         <div class="form-border col-lg-6 col-sm-10">
         <form method="POST" action="{{ url_for('register') }}">
                 <div class="row justify-content-center">
-					<div class="input-field form-group">
+					<div class="input-field">
 						<label class="text-label" for="username">Username <i class="fas fa-user"></i> </label>
 						<input id="username" class="input-design" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="input-field form-group">
+                    <div class="input-field">
                         <label class="text-label" for="password">Password <i class="fas fa-unlock-alt"></i> </label>
                         <input id="password" class="input-design" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>

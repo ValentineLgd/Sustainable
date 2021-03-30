@@ -216,6 +216,15 @@ ul {
     background-attachment: fixed;
 }}
 
+
+
+@media only screen and (min-width: 992px) {
+.form-border {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+}
+
 @media only screen and (max-width: 992px) {
 .title h1 {
     margin-bottom:10%;   
@@ -294,7 +303,7 @@ ul {
 
 
 #footer-section {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 #footer-section ul {
@@ -467,6 +476,9 @@ ul {
     width:500px;
     font-size:20px;
 }
+.margin-bottom-about {
+    margin-bottom: 5%;
+}
 }
 
 @media only screen and (max-width: 300px) {
@@ -608,10 +620,9 @@ ul {
 }
 
 .form-border {
-    border : 2px solid black;
-    border-radius: 5px;
     padding: 50px;
 }
+
 
 /* Buttons */
 
@@ -687,10 +698,12 @@ ul {
 .text-label {
     font-family: "Indie Flower", sans-serif;
     font-size:20px;
+    margin-top:3%;
 }
 
 .input-design {
     margin-left:5px;
+    padding-right:15px;
     border-radius:5px;
     border: 3px solid black;
     background-color: black;
