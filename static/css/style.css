@@ -339,6 +339,10 @@ ul {
     font-weight:900;
 }
 
+.form-position {
+    margin-left:15%;
+}
+
 #query {
     border-radius:5px;
     border: 3px solid black;
@@ -346,9 +350,6 @@ ul {
     color:white;
 }
 
-.form-position {
-    margin-left:15%;
-}
 
 .title-brand h3 {
     background-color:black;
@@ -362,12 +363,8 @@ ul {
     margin-left:5%;
     margin-right:5%;
     padding: 15px;
-    height: 450px;
+    height: 100%;
   }
-
-.frame-col-get {
-    height:400px;
-}
 
 
 .container-fluid ul {
@@ -499,7 +496,6 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .base {
@@ -525,6 +521,11 @@ ul {
 
 .description-brand ul {
     margin-left:5%;
+}
+
+
+.form-position {
+    margin-left:0%;
 }}
 
 
