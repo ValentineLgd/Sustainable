@@ -190,6 +190,8 @@ ul {
 
 /*---- About----*/
 
+
+
 .page-about-content {
     margin-bottom: 5%;
     margin-top:5%;
@@ -230,6 +232,10 @@ ul {
 @media only screen and (min-width: 1100px) {
 .image-getbrands {
     background-attachment: fixed;
+}
+
+.title-what {
+    margin-top:15%;
 }}
 
 
