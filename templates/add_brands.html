@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="title">
-        <h1><strong> Add a brand <i class="fas fa-plus"></i></strong></h1>
-    </div>
-    <form method="POST" action="{{ url_for('add_brands') }}">
+<div class="title">
+    <h1><strong> Add a brand <i class="fas fa-plus"></i></strong></h1>
+</div>
+<form method="POST" action="{{ url_for('add_brands') }}">
     <div class="row justify-content-center">
-    <div class=" form-border col-lg-6 col-md-12">
-        <!--Bootstrap form template-->
+        <div class=" form-border col-lg-6 col-md-12">
+            <!--Bootstrap form template-->
             <div class="form-group">
                 <label for="brand_name"><strong>Name</strong></label>
                 <input type="text" class="form-control" id="brand_name" name="brand_name" placeholder="Enter brand's name" required>
@@ -20,31 +20,29 @@
                 <label for="country"><strong>Location</strong></label>
                 <input type="text" class="form-control" id="country" name="country" placeholder="Enter brand's location" required>
             </div><br>
-            
-			<div class="form-group">
-				<label for="category_name"><strong>Category</strong></label>
-				<select id="category_name" class="form-control" name="category_name" class="validate" required>
+            <div class="form-group">
+                <label for="category_name"><strong>Category</strong></label>
+                <select id="category_name" class="form-control" name="category_name" class="validate" required>
                     <option value="" disabled selected>Category</option>
                     {% for category in categories %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
-			</div><br>
+            </div><br>
             <div class="form-group">
                 <label for="description"><strong>Description</strong></label>
                 <textarea class="form-control" id="description" name="description" rows="3" placeholder="Describe the brand & why you love it" required></textarea>
             </div><br>
-        <div class="row justify-content-center">
-            <div class="vertical-center-form">
-                <a href="{{ url_for('get_brands') }}" class="btn">
-                            Cancel
-                </a>
-                <button type="submit" class="btn btn-color btn-add" data-toggle="modal" data-target="#myModal">Confirm</button>
+            <div class="row justify-content-center">
+                <div class="vertical-center-form">
+                    <a href="{{ url_for('get_brands') }}" class="btn">
+                                    Cancel
+                    </a>
+                    <button type="submit" class="btn btn-color btn-add" data-toggle="modal" data-target="#myModal">Confirm</button>
+                </div>
             </div>
         </div>
-</div>
-</div>
-    </form>
-
+    </div>
+</form>
 
 {% endblock %}

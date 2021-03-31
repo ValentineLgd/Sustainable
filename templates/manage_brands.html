@@ -3,63 +3,64 @@
     <div class="title">
         <h1><strong>Manage catalogue <i class="fas fa-edit"></i></strong></h1>
     </div>
-        <div class="container-fluid">
-            <div class= "row justify-content-center">
-                <div class="col-lg-3 manage-catalogue-p">
-                    <p class="manage-catalogue-p-1">
-                        Welcome to our <strong>open catalogue!</strong> <br><br>
-                        Because we are <stronger><u>stronger together</u></stronger> : <br><br>
-                    </p>
-                    <p class="p-catalogue-1">
-                        Please <stronger>share</stronger> with our community your
-                        knwoledge by completing the current sustainable brands catalogue
-                    </p>
-                </div>
-                <div class="col-lg-5 image-manage nopadding">
-                    <img src="{{ url_for('static', filename='img/manage_brand.jpg') }}" alt="clothes"/>
-                </div> 
+    <div class="container-fluid">
+        <div class= "row justify-content-center">
+            <div class="col-lg-3 manage-catalogue-p">
+                <p class="manage-catalogue-p-1">
+                    Welcome to our <strong>open catalogue!</strong> <br><br>
+                    Because we are <stronger><u>stronger together</u></stronger> : <br><br>
+                </p>
+                <p class="p-catalogue-1">
+                    Please <stronger>share</stronger> with our community your
+                    knwoledge by completing the current sustainable brands catalogue
+                </p>
             </div>
+            <div class="col-lg-5 image-manage nopadding">
+                <img src="{{ url_for('static', filename='img/manage_brand.jpg') }}" alt="clothes"/>
+            </div> 
         </div>
-        {% for brand in brands %}
-        <div class="container-fluid">
-            <div>
-                <ul>
-                    <div class="row justify-content-center">
+    </div>
+    {% for brand in brands %}
+    <div class="container-fluid">
+        <div>
+            <ul>
+                <div class="row justify-content-center">
                 {% if session.user|lower == brand.created_by|lower %}
-                        <div class="notAnimated animateBlock rightAlign center col-lg-4 col-md-10 frame-col frame-col-manage">
-                            <li>
-                                <div class="title-brand">
-                                    <h3>
-                                        <strong>{{ brand.brand_name }}</strong> 
-                                    </h3>
-                                </div>
-                                <div class="content-brand">
-                                    <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
-                                    <strong>Location: </strong>{{ brand.country }}<br>
-                                    <strong>Category: </strong>{{ brand.category_name }}<br>
-                                    <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="createdby"> <strong>created by:</strong> <em>{{ brand.created_by }} </em></p>
-                            </li>
-                            <div class="row justify-content-center">
-                                <div class="vertical-center">
-                                    <a href="{{ url_for('delete_brand', brand_id=brand._id) }}"><button class="btn" type="submit" data-toggle="modal" data-target="#myModal">Delete</button></a>
-                                    <a class="btn btn-color btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
+                    <div class="notAnimated animateBlock rightAlign center col-lg-4 col-md-10 frame-col frame-col-manage">
+                        <li>
+                            <div class="title-brand">
+                                <h3>
+                                    <strong>{{ brand.brand_name }}</strong> 
+                                </h3>
+                            </div>
+                            <div class="content-brand">
+                                <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
+                                <strong>Location: </strong>{{ brand.country }}<br>
+                                <strong>Category: </strong>{{ brand.category_name }}<br>
+                                <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="createdby"> <strong>created by:</strong> <em>{{ brand.created_by }} </em></p>
+                        </li>
+                        <div class="row justify-content-center">
+                            <div class="vertical-center">
+                                <a href="{{ url_for('delete_brand', brand_id=brand._id) }}"><button class="btn" type="submit" data-toggle="modal" data-target="#myModal">Delete</button></a>
+                                <a class="btn btn-color btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
                             </div>
                         </div>
-                {% endif %}
-                </div>   
-                </ul>
+                    {% endif %}
+                    </div>  
+                </div> 
+            </ul>
         </div>
-                {% endfor %}     
+    {% endfor %}     
         <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 content-brand-manage">
+            <div class="row justify-content-center">
+                <div class="col-12 content-brand-manage">
                     <p class="p-large">Want to share your own favorite brand?</p>
                     <a class="btn btn-color btn-add" href="{{ url_for('add_brands') }}" role="button">Add a brand</a>
+                </div>
             </div>
-        </div>
         </div>
 {% endblock %}

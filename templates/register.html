@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!--Code inspired from Code institute Mini Project-->
-
     <div class="title">
         <h1><strong> Register <i class="fas fa-user-plus"></i></strong></h1>
     </div>
-
     <div class="row justify-content-center">
         <div class="form-border col-lg-6 col-sm-10">
-        <form method="POST" action="{{ url_for('register') }}">
+            <form method="POST" action="{{ url_for('register') }}">
                 <div class="row justify-content-center">
-					<div class="input-field">
-						<label class="text-label" for="username">Username <i class="fas fa-user"></i> </label>
-						<input id="username" class="input-design" name="username" type="text" minlength="5"
+                    <div class="input-field">
+                        <label class="text-label" for="username">Username <i class="fas fa-user"></i> </label>
+                        <input id="username" class="input-design" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     </div>
                 </div>
@@ -30,7 +27,7 @@
                         Register
                     </button>
                 </div>
-        </form>
+            </form>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -41,5 +38,4 @@
             </p>
         </div>
     </div>
-
 {% endblock %}

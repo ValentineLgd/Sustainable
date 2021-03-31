@@ -1,3 +1,5 @@
+/*--Code to make div slide in while scrolling down adapted from https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/ */
+
 $(function() {
   var $elements = $('.animateBlock.notAnimated'); //contains all elements of nonAnimated class
   var $window = $(window);

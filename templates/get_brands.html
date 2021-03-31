@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-
     <div class="title">
         <h1><strong>Sustainables brands catalogue <i class="fas fa-shopping-cart"></i></strong></h1>
     </div>
-        <div class="container-fluid img-outer">
+    <div class="container-fluid img-outer">
         <div class="image image-getbrands">
             <div class="cover-text">
                 <h2>
@@ -15,74 +14,69 @@
                 </h2>
             </div>
         </div>
-        </div>
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 description-brand">
-                    <p class="align">For us, sustainable brands meet at least 2 criteria:
-                        <ul>
-                            <li><i class="fas fa-leaf"></i> <strong><u>social commitment</u>:</strong> each clothe is manufactured in respect with fundamental labor rights.</li>
-                            <li><i class="fas fa-handshake"></i> <strong><u>environmental commitment</u></strong>: mainly eco-responsible materials are used while creating items</li>
-                </ul></p>
-            </div>
-        </div>
-    <form class="form-inline" action="{{ url_for('search') }}" method="post">  
-    <div class="row justify-content-center">
-</div>
-    <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-12">
-    <input type="text" name="query" id="query" minlength="3" class="validate form-position" required">
-    <button type="submit" class="btn btn-small">
-        <i class="fas fa-search left"></i>
-    </button>
-    <a class="btn btn-small" href="{{ url_for('get_brands') }}"><i class="fas fa-undo"></i></a>
-    </div>
-    </div>
-    </form>
-</div>
     </div>
     <div class="container-fluid">
-            <div>
-                <ul>
-                    <div class="row justify-content-center">
-                    {% for brand in brands %}
-                        <div class="notAnimated animateBlock rightAlign center col-lg-4 col-md-10 frame-col frame-col-get">
-                            <li>
-                                <div class="title-brand">
-                                    <h3>
-                                        <strong>{{ brand.brand_name }}</strong> 
-                                    </h3>
-                                </div>
-                                <div class="content-brand">
-                                    <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
-                                    <strong>Location: </strong>{{ brand.country }}<br>
-                                    <strong>Category: </strong>{{ brand.category_name }}<br>
-                                    <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="createdby"> <strong>created by:</strong> <em>{{ brand.created_by }} </em></p>
-                            </li>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </ul>
-            </div>  
+        <div class="row">
+            <div class="col-12 description-brand">
+                <p class="align">For us, sustainable brands meet at least 2 criteria:
+                    <ul>
+                        <li><i class="fas fa-leaf"></i> <strong><u>social commitment</u>:</strong> each clothe is manufactured in respect with fundamental labor rights.</li>
+                        <li><i class="fas fa-handshake"></i> <strong><u>environmental commitment</u></strong>: mainly eco-responsible materials are used while creating items</li>
+                    </ul>
+                </p>
+            </div>
         </div>
-        <div class="container-fluid">
+        <form class="form-inline" action="{{ url_for('search') }}" method="post"> 
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-12">
+                    <input type="text" name="query" id="query" minlength="3" class="validate form-position" required">
+                    <button type="submit" class="btn btn-small">
+                        <i class="fas fa-search left"></i>
+                    </button>
+                    <a class="btn btn-small" href="{{ url_for('get_brands') }}"><i class="fas fa-undo"></i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <ul>
+            <div class="row justify-content-center">
+                {% for brand in brands %}
+                    <div class="notAnimated animateBlock rightAlign center col-lg-4 col-md-10 frame-col frame-col-get">
+                        <li>
+                            <div class="title-brand">
+                                <h3>
+                                    <strong>{{ brand.brand_name }}</strong> 
+                                </h3>
+                            </div>
+                            <div class="content-brand">
+                                <strong>Website: </strong><a href="{{ brand.website }}" target="_blank">{{ brand.website }}</a><br>
+                                <strong>Location: </strong>{{ brand.country }}<br>
+                                <strong>Category: </strong>{{ brand.category_name }}<br>
+                                <strong>Description: </strong><br><br><p>{{ brand.description }}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="createdby"> <strong>created by:</strong> <em>{{ brand.created_by }} </em></p>
+                        </li>
+                    </div>
+                {% endfor %}
+            </div>
+        </ul>
+    </div>
+    <div class="container-fluid">
         <div class="row justify-content-center">
-        <div class="col-12 content-brand-manage">
-                    Is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
-                    <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> 
-                        <strong>Register</strong> today to complete the catalogue & create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong></p>
-                    <a class="btn" href="{{ url_for('register') }}" role="button">Register</a>
-            <p class="align">
-                <br>Already Registered?
-                <a href="{{ url_for('login') }}" class="btn btn-black-border-white"">Log In</a>
-            </p>
+            <div class="col-12 content-brand-manage">
+                <p>Is your favorite sustainable brand <strong>not included</strong> in the list?<br></p>
+                <p class="border-white"><br>Please <strong>participate</strong> enhancing the value of this website by managing the current catalogue <br> 
+                    <strong>Register</strong> today to complete the catalogue & create a <strong>better world</strong> <br><br> <strong class="together-word">together</strong>
+                </p>
+                <a class="btn" href="{{ url_for('register') }}" role="button">Register</a>
+                <p class="align">
+                    <br>Already Registered?
+                    <a href="{{ url_for('login') }}" class="btn btn-black-border-white">Log In</a>
+                </p>
+            </div>
         </div>
     </div>
-                </div>
-
-
 {% endblock %}
