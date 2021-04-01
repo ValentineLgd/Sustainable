@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Raleway&display=swap');
 
-
-*{
+* {
     margin:0;
     padding:0;
     border:0;
 }
+
+html {
+    overflow-y: scroll;}
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -27,37 +29,19 @@ ul {
     padding-left:0;
 }
 
-.btn {
-    border:1px solid black;
-    background-color:white;
-    font-size: 18px;
-    font-family : 'Indie Flower', sans-serif;
-    margin-top:3%;
-    font-weight: 800;
-    margin:auto;
-}
-
-.btn:hover {
-    background-color: black;
-    color:white;
-}
-
-.btn-black-border-white {
-    background-color : black;
-    border: 2px solid white;
-    color: white;
-    font-weight: 800;
-}
-
-.btn-black-border-white:hover {
-    background-color: white;
-    color: black;
-}
-
 .row {
     margin: 0;
+    padding:0;
 }
 
+.base {
+    margin-top:13%;
+    margin-bottom:5%;
+}
+
+.container-fluid {
+    padding: 0;
+}
 
 /*----------Navbar----------*/
 
@@ -121,644 +105,21 @@ ul {
 
 /*End of credit*/
 
-@media only screen and (max-width: 500px) {
-.navbar-brand {
-    font-size:26px;
-    padding: 0px;
-    padding-left:0px;
-    padding-right:0px;
-    background-color:black;
-    color: white;
-    margin-left: 0px;
-}
-
-}
-
 @media only screen and (max-width: 350px) {
 .navbar-brand {
     font-size:20px;
 }}
 
-/*-----Hero image */
-
-.cover-about-text {
-    top:95px;
-    left:50%;
-    position: relative;
-    border:1px solid white;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 500px;
-}
-
-.cover-about-text h2 {
-    font-family:Lato;
-    text-transform:uppercase;
-    font-weight:800;
-    letter-spacing:8px;
-    font-size: 40px;
-    color:white;
-    text-align:right;
-    padding: 10px;
-}
-
-#image-hero img {
-    height:350px;
-    width:100%;
-    background-size: cover;
-}
-
 @media only screen and (max-width: 500px) {
-#image-hero img {
-    height:300px;
-    max-width:500px;
+.navbar-brand {
+    font-size:26px;
+    padding: 0px;
+    margin-left: 0px;
 }}
 
-.container-fluid {
-    padding: 0;
-}
+/* About page */
 
-.row {
-    padding: 0;
-}
-
-#image-brand img {
-    height:350px;
-    width:100%;
-    background-size: cover;
-}
-
-
-/*---- About----*/
-
-.page-about-content {
-    margin-bottom: 5%;
-    margin-top:5%;
-}
-
-.title h1 {
-    font-family: "Raleway", sans-serif;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-    padding: 10px;
-    margin-bottom:5%;   
-    background-color:black;
-    color:white;
-}
-
-.base {
-    margin-top:13%;
-}
-
-.author {
-    text-align:right;
-}
-
-.content-about {
-    text-align: center;
-    background-color:black;
-    color:white;
-    padding: 30px;
-}
-
-.content-about p {
-    font-size:14px;
-}
-
-@media only screen and (min-width: 1100px) {
-.image-getbrands {
-    background-attachment: fixed;
-}
-
-.title-what {
-    margin-top:15%;
-}}
-
-
-
-@media only screen and (min-width: 992px) {
-.form-border {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-.form-border {
-    padding: 50px;
-}
-}
-
-@media only screen and (max-width: 992px) {
-.title h1 {
-    margin-bottom:10%;   
-    margin-top:25%;
-}
-
-.form-border {
-    margin-top: 5%;
-}
-
-
-.base {
-    margin-top:20%;
-}
-
-.title h2 {
-    margin-bottom:5%;   
-}
-}
-
-.title h2:hover {
-    background-color:white;
-    color:black;
-}
-
-.text-about {
-    text-align: center;
-    margin-top:1%;
-    margin-bottom:5%;   
-    margin-left:2%;
-    font-size: 18px;
-}
-
-.title h2 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 900;
-    letter-spacing: 5px;
-    margin-top:5%;
-    margin-bottom:10%;   
-    background-color:black;
-    color:white;
-}
-
-/* flash messages */
-
-#myModal {
-    color:black;
-    text-align:center;
-    top:100px;
-    font-family: "Indie Flower", sans-serif;
-}
-
-#modalDelete {
-    top:20%;
-}
-
-.close span {
-    color:white;
-}
-
-.modal-content {
-    border: 1px solid black;
-}
-
-.modal-header {
-    background-color: black;
-    color: white;
-}
-
-.modal-body h5 {
-    margin-top:50px;
-}
-
-.base {
-    margin-top:13%;
-    margin-bottom:5%;
-    }
-
-/* Footer */
-
-
-#footer-section {
-    margin-top: 5%;
-}
-
-#footer-section ul {
-    margin-top:5%;
-}
-
-.footer-list {
-    border-top: 2px solid black;
-    text-align:center;
-    padding-top:1%;
-    list-style-type: none;
-}
-
-.footer-list li {
-    display: inline;
-    font-size:13px;
-}
-
-.footer-list a {
-    text-decoration: none;
-    color:black;
-}
-
-.footer-list li a i {
-    width: 35px;
-    height: 35px;
-    padding: 5px 15px;
-    padding-top: 10px;
-    color: black;
-    font-size: 20px;
-    border-radius: 50%;
-}
-
-/* Get Brands */
-
-.form-inline {
-    margin-top:3%;
-    display: block;
-}
-
-.form-inline h5 {
-    font-weight:900;
-}
-
-.form-position {
-    margin-left:15%;
-}
-
-#query {
-    border-radius:5px;
-    border: 3px solid black;
-    background-color: black;
-    color:white;
-    margin-top:5%;
-}
-
-
-.title-brand h3 {
-    background-color:black;
-    color:white;
-    text-align: center;
-}
-
-.frame-col {
-    border:2px solid black;
-    margin-top: 5%;
-    margin-left:5%;
-    margin-right:5%;
-    padding: 15px;
-    padding-bottom:5%;
-  }
-
-.frame-col-get {
-    height: 100%;
-}
-
-.frame-col-manage {
-    height:140%;
-}
-
-
-.container-fluid ul {
-    list-style-type: none;
-}
-
-.content-brand {
-    margin-top:5%;
-    margin-bottom: 5%;
-    font-size: 14px;
-}
-
-.content-brand p {
-    text-align: center;
-}
-
-.content-brand-manage {
-    text-align: center;
-    margin-top:5%;
-    background-color:black;
-    color:white;
-    padding: 30px;
-}
-
-.createdby {
-    text-align:right;
-}
-
-.together-word {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
-
-.border-white {
-    border: 2px solid white;
-    padding: 5px;
-    padding-bottom:20px;
-}
-
-.image {
-    text-align: center;
-    background-size:cover;
-    height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.image-getbrands {
-    background-image: url('/static/img/shopping_img.jpg');
-    position:relative;
-}
-
-.image-about {
-    background-image: url('/static/img/hero.jpg');
-    height: 400px;
-}
-
-.cover-text h2 {
-    font-size:22px;
-    font-weight:800;
-}
-.cover-text {
-    letter-spacing: 4px;
-    font-size:20px;
-    width: 300px;
-    height: 100px;
-    padding-left: 10px;
-    padding-top:15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border:1px solid black;
-    top: 5%;
-    left: 3%;
-    position: absolute;
-}
-
-.cover-text-2 {
-    height: 100px;
-    top: 45%;
-    left: 10%;
-    position: absolute;
-}
-
-.description-brand ul {
-    margin-left:25%;
-}
-
-
-@media only screen and (max-width: 1200px) {
-.cover-about-text {
-    left: 25%;
-    bottom:30px;
-    width:500px;
-}
-.frame-col {
-    padding-bottom:10%;
-}}
-
-@media only screen and (max-width: 992px) {
-.cover-about-text {
-    left: 25%;
-    text-align:right;
-    bottom:30px;
-    width:500px;
-    font-size:20px;
-}
-.margin-bottom-about {
-    margin-bottom: 5%;
-}
-}
-
-@media only screen and (max-width: 300px) {
-.cover-about-text {
-    display:none;
-}
-.navbar-brand{
-    font-size:16px;
-}
-
-title h1 {
-    font-size: 14px;
-}
-
-}
-
-@media only screen and (max-width: 550px) {
-.cover-about-text {
-    width: 270px;
-    height: 200px;
-    top: 80px;
-    left: 15%;
-}
-
-.frame-col {
-    padding-bottom:20%;
-}
-.cover-about-text h2 {
-    font-size:20px;
-}
-
-.image-about {
-    height: 350px;
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.base {
-    margin-top:30%;
-}
-.cover-text {
-    height: 10px;
-    width: 150px;
-    left: 3%;
-    padding-left: 0px;
-    padding-bottom: 130px;
-}
-.cover-text-2 {
-    height: 100px;
-    top: 50%;
-    left: 30PX;
-}
-
-.image-getbrands {
-    height: 350px;
-    background-position: center;
-}
-
-.description-brand ul {
-    margin-left:5%;
-}
-
-
-.form-position {
-    margin-left:0%;
-}}
-
-
-@media only screen and (max-width: 992px) {
-.description-brand ul {
-    margin-left:1%;
-}
-
-}
-
-.description-brand {
-    background-color: black;
-    padding-top:10px;
-    color:white;
-    margin-top:5%;
-}
-
-.align {
-    text-align: center;
-}
-
-/* Manage catalogue */
-
-.col-manage {
-    border: 1px solid black;
-    margin: 3%;
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.col-manage a {
-    text-decoration:none ;
-}
-
-.col-manage a:hover {
-    font-weight:900;
-    color: white;
-}
-
-.btn-manage {
-    color: white;
-    font-size: 25px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.image-manage img {
-    height:100%;
-    width:100%;
-    background-size: cover;
-}
-
-.nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
-}
-
-.manage-catalogue-p {
-    text-align: center;
-    border: 2px solid black;
-    padding:30px;
-    background-color: black;
-    color:white;
-}
-
-.manage-catalogue-p-1 {
-    
-    padding-top:7%;
-}
-
-.p-catalogue-1 {
-    border: 2px solid white;
-    padding:5px;
-}
-
-.p-large {
-    font-size:x-large;
-}
-
-
-
-/* Buttons */
-
-.btn-edit {
-    background-image: url('/static/img/sky.jpg');
-    color: white;
-    width: 100px;
-    font-weight: 400;
-    background-position: center;
-}
-
-.btn-add  {
-    background-image: url('/static/img/spring.jpg');
-    color: black;
-    width: 150px;
-    background-position: center;
-}
-
-
-.vertical-center {
-  margin: auto;
-  margin-top:3%;
-  margin-bottom:3%;
-  position: absolute;
-  top: 90%;
-  padding-bottom:5%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.vertical-center-form {
-    top:92%;
-}
-
-.btn-small {
-    width: 40px;
-    height: 33px;
-}
-
-.btn small i {
-    font-size: 10px;
-    padding: 0;
-}
-
-
-/**Webkit effect inspired from https://www.web-eau.net/blog/15-effets-css3-pour-vos-images **/
-
-@media only screen and (min-width: 1050px) {
-.btn-color {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.btn-color:hover {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-    cursor:pointer;
-    font-weight:900;
-}
-.btn-add:hover{
-    color:black;
-    font-weight:900;
-}}
-
-/* Register */
-
-.section-log {
-    margin-top:5%;
-}
-
-.text-label {
-    font-family: "Indie Flower", sans-serif;
-    font-size:20px;
-    margin-top:3%;
-}
-
-.input-design {
-    margin-left:5px;
-    padding-right:45px;
-    border-radius:5px;
-    border: 3px solid black;
-    background-color: black;
-    color:white;
-}
-/*--Code to make div slide in while scrolling down adapted from https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/ */
-
-html {
-  overflow-y: scroll;
-}
+/*-- Slide effect : Code to make div slide in while scrolling down adapted from https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/ */
 
 .rightAlign {
   float: right;
@@ -797,7 +158,6 @@ html {
   filter: alpha(opacity=100);
 }
 
-
 .left.animated {
   left: 0%;
   opacity: 1;
@@ -812,8 +172,563 @@ html {
 
 /* End of credit */
 
+.page-about-content {
+    margin-bottom: 5%;
+    margin-top:5%;
+}
+
+.title h1 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding: 10px;
+    margin-bottom:5%;   
+    background-color:black;
+    color:white;
+}
+
+.author {
+    text-align:right;
+}
+
+.content-about {
+    text-align: center;
+    background-color:black;
+    color:white;
+    padding: 30px;
+}
+
+.content-about p {
+    font-size:14px;
+}
+
+.title h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-top:5%;
+    margin-bottom:10%;   
+    background-color:black;
+    color:white;
+}
+
+.title h2:hover {
+    background-color:white;
+    color:black;
+}
+
+.text-about {
+    text-align: center;
+    margin-top:1%;
+    margin-bottom:5%;   
+    margin-left:2%;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 300px) {
+.navbar-brand{
+    font-size:16px;
+}
+
+title h1 {
+    font-size: 14px;
+}}
 
 @media only screen and (max-width: 500px) {
 .left.animated {
     left:3%;
+}}
+
+@media only screen and (max-width: 992px) {
+.title h1 {
+    margin-bottom:10%;   
+    margin-top:25%;
 }
+
+.margin-bottom-about {
+    margin-bottom: 5%;
+}
+
+.base {
+    margin-top:20%;
+}
+
+.title h2 {
+    margin-bottom:5%;   
+}}
+
+@media only screen and (min-width: 1100px) {
+.image-getbrands {
+    background-attachment: fixed;
+}
+
+.title-what {
+    margin-top:15%;
+}}
+
+/* Modals (Bootstrap)- flash messages */
+
+#myModal {
+    color:black;
+    text-align:center;
+    top:100px;
+    font-family: "Indie Flower", sans-serif;
+}
+
+#modalDelete {
+    top:20%;
+}
+
+.close span {
+    color:white;
+}
+
+.modal-content {
+    border: 1px solid black;
+}
+
+.modal-header {
+    background-color: black;
+    color: white;
+}
+
+.modal-body h5 {
+    margin-top:50px;
+}
+
+/* Footer */
+
+#footer-section ul {
+    margin-top:5%;
+}
+
+.footer-list {
+    border-top: 2px solid black;
+    text-align:center;
+    padding-top:1%;
+    list-style-type: none;
+}
+
+.footer-list li {
+    display: inline;
+    font-size:13px;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color:black;
+}
+
+.footer-list li a i {
+    width: 35px;
+    height: 35px;
+    padding: 5px 15px;
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+/*Get Brands/Manage catalogue pages */
+
+.title-brand h3 {
+    background-color:black;
+    color:white;
+    text-align: center;
+}
+
+.frame-col {
+    border:2px solid black;
+    margin-top: 5%;
+    margin-left:5%;
+    margin-right:5%;
+    padding: 15px;
+    padding-bottom:5%;
+  }
+
+.frame-col-get {
+    height: 100%;
+}
+
+.container-fluid ul {
+    list-style-type: none;
+}
+
+.content-brand {
+    margin-top:5%;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+
+.content-brand p {
+    text-align: center;
+}
+
+.content-brand-manage {
+    text-align: center;
+    margin-top:5%;
+    background-color:black;
+    color:white;
+    padding: 30px;
+}
+
+.createdby {
+    text-align:right;
+}
+
+.together-word {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.border-white {
+    border: 2px solid white;
+    padding: 5px;
+    padding-bottom:20px;
+}
+
+.description-brand ul {
+    margin-left:25%;
+}
+
+.description-brand {
+    background-color: black;
+    padding-top:10px;
+    color:white;
+    margin-top:5%;
+}
+
+.align {
+    text-align: center;
+}
+
+.frame-col-manage {
+    height:140%;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.manage-catalogue-p {
+    text-align: center;
+    border: 2px solid;
+    padding:30px;
+    background-color: black;
+    color:white;
+}
+
+.manage-catalogue-p-1 {
+    padding-top:7%;
+}
+
+.p-catalogue-1 {
+    border: 2px solid white;
+    padding:5px;
+}
+
+.p-large {
+    font-size:x-large;
+}
+
+@media only screen and (max-width: 550px) {
+.frame-col {
+    padding-bottom:20%;
+}
+
+.base {
+    margin-top:30%;
+}
+
+.description-brand ul {
+    margin-left:5%;
+}
+
+.form-position {
+    margin-left:0%;
+}}
+
+@media only screen and (max-width: 992px) {
+.description-brand ul {
+    margin-left:1%;
+}}
+
+@media only screen and (max-width: 1200px) {
+.frame-col {
+    padding-bottom:10%;
+}}
+
+/* Images */
+
+.image {
+    text-align: center;
+    background-size:cover;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-getbrands {
+    background-image: url('/static/img/shopping_img.jpg');
+    position:relative;
+}
+
+.image-manage img {
+    height:100%;
+    width:100%;
+    background-size: cover;
+}
+
+.image-about {
+    background-image: url('/static/img/hero.jpg');
+    height: 400px;
+}
+
+.cover-about-text {
+    top:95px;
+    left:50%;
+    position: relative;
+    border:1px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 500px;
+}
+
+.cover-about-text h2 {
+    font-family:"Lato", sans-serif;
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:8px;
+    font-size: 40px;
+    color:white;
+    text-align:right;
+    padding: 10px;
+}
+
+.cover-text h2 {
+    font-size:22px;
+    font-weight:800;
+    letter-spacing: 4px;
+}
+
+.cover-text {
+    width: 300px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top:15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border:1px solid black;
+    top: 5%;
+    left: 3%;
+    position: absolute;
+}
+
+.cover-text-2 {
+    height: 100px;
+    top: 45%;
+    left: 10%;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1200px) {
+.cover-about-text {
+    left: 25%;
+    bottom:30px;
+    width:500px;
+}}
+
+@media only screen and (max-width: 992px) {
+.cover-about-text {
+    left: 25%;
+    text-align:right;
+    bottom:30px;
+    width:500px;
+    font-size:20px;
+}}
+
+@media only screen and (max-width: 550px) {
+.cover-about-text {
+    width: 270px;
+    height: 200px;
+    top: 80px;
+    left: 15%;
+}
+
+.cover-about-text h2 {
+    font-size:20px;
+}
+
+.image-about {
+    height: 350px;
+    width:100%;
+}
+
+.cover-text {
+    height: 10px;
+    width: 150px;
+    left: 3%;
+    padding-left: 0px;
+    padding-bottom: 130px;
+}
+
+.cover-text-2 {
+    height: 100px;
+    top: 50%;
+    left: 30PX;
+}
+
+.image-getbrands {
+    height: 350px;
+}}
+
+@media only screen and (max-width: 300px) {
+.cover-about-text {
+    display:none;
+}}
+
+/* Register/Login pages */
+
+.margin-top-log {
+    margin-top:5%;
+}
+
+/*Forms */ 
+
+.text-label {
+    font-family: "Indie Flower", sans-serif;
+    font-size:20px;
+    margin-top:3%;
+}
+
+.input-design {
+    margin-left:5px;
+    padding-right:45px;
+    border-radius:5px;
+    border: 3px solid;
+    background-color: black;
+    color:white;
+}
+
+.form-inline {
+    margin-top:3%;
+    display: block;
+}
+
+.form-inline h5 {
+    font-weight:900;
+}
+
+.form-position {
+    margin-left:15%;
+}
+
+#query {
+    border-radius:5px;
+    border: 3px solid ;
+    background-color: black;
+    color:white;
+    margin-top:5%;
+}
+
+.form-border {
+    padding: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+.form-border {
+    border: 2px solid black;
+    border-radius: 5px;
+}}
+
+/* Buttons */
+
+.btn {
+    border:1px solid black;
+    background-color:white;
+    font-size: 18px;
+    font-family : 'Indie Flower', sans-serif;
+    font-weight: 800;
+    margin:auto;
+}
+
+.btn:hover {
+    background-color: black;
+    color:white;
+}
+
+.btn-black-border-white {
+    background-color : black;
+    border: 2px solid white;
+    color: white;
+    font-weight: 800;
+}
+
+.btn-black-border-white:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-edit {
+    background-image: url('/static/img/sky.jpg');
+    color: white;
+    width: 100px;
+    font-weight: 400;
+    background-position: center;
+}
+
+.btn-add  {
+    background-image: url('/static/img/spring.jpg');
+    color: black;
+    width: 150px;
+    background-position: center;
+}
+
+.vertical-center {
+  margin: auto;
+  margin-top:3%;
+  margin-bottom:3%;
+  position: absolute;
+  top: 90%;
+  padding-bottom:5%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical-center-form {
+    top:92%;
+}
+
+.btn-small {
+    width: 40px;
+    height: 33px;
+}
+
+.btn small i {
+    font-size: 10px;
+    padding: 0;
+}
+
+/**Webkit effect inspired from https://www.web-eau.net/blog/15-effets-css3-pour-vos-images **/
+
+@media only screen and (min-width: 1050px) {
+.btn-color {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.btn-color:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+    cursor:pointer;
+    font-weight:900;
+}
+.btn-add:hover{
+    color:black;
+    font-weight:900;
+}}

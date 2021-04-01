@@ -1,3 +1,5 @@
+# Code adapted from Code Institute Mini-Project : Putting it all together #
+
 import os
 from flask import (
     Flask, flash, render_template,
@@ -22,7 +24,6 @@ mongo = PyMongo(app)
 @app.route("/about")
 def about():
     return render_template("about.html")
-
 
 
 @app.route("/get_brands")
@@ -61,7 +62,6 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
-
 
 
 @app.route("/logout")
@@ -145,7 +145,6 @@ def delete_brand(brand_id):
     mongo.db.brands.remove({"_id": ObjectId(brand_id)})
     flash("Brand Successfully Deleted")
     return redirect(url_for("manage_brands"))
-    
 
 
 if __name__ == "__main__":
