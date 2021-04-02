@@ -36,12 +36,12 @@
         </div>
     </div>
     {% for brand in brands %}
+    {% if session.user|lower == brand.created_by|lower %}
     <div class="container-fluid">
         <div>
             <ul>
                 <div class="row justify-content-center">
-                {% if session.user|lower == brand.created_by|lower %}
-                    <div class="col-lg-4 col-md-10 frame-col frame-col-manage">
+                    <div class="col-lg-4 col-md-10 frame-col">
                         <li>
                             <div class="title-brand">
                                 <h3>
@@ -64,10 +64,10 @@
                                 <a class="btn btn-color btn-edit" href="{{ url_for('edit_brands', brand_id=brand._id) }}">Edit</a>
                             </div>
                         </div>
-                    {% endif %}
                     </div>  
                 </div> 
             </ul>
         </div>
+    {% endif %}
     {% endfor %}     
 {% endblock %}
