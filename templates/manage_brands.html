@@ -20,13 +20,28 @@
             </div> 
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 content-brand-manage">
+                <p class="p-large">Want to share your own favorite brand?</p>
+                <a class="btn btn-color btn-add" href="{{ url_for('add_brands') }}" role="button">Add a brand</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 content-brand-manage">
+                <p class="p-large">Or to edit your catalogue? <i class="fas fa-arrow-down"></i></p>
+            </div>
+        </div>
+    </div>
     {% for brand in brands %}
     <div class="container-fluid">
         <div>
             <ul>
                 <div class="row justify-content-center">
                 {% if session.user|lower == brand.created_by|lower %}
-                    <div class="notAnimated animateBlock rightAlign center col-lg-4 col-md-10 frame-col frame-col-manage">
+                    <div class="col-lg-4 col-md-10 frame-col frame-col-manage">
                         <li>
                             <div class="title-brand">
                                 <h3>
@@ -55,12 +70,4 @@
             </ul>
         </div>
     {% endfor %}     
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 content-brand-manage">
-                    <p class="p-large">Want to share your own favorite brand?</p>
-                    <a class="btn btn-color btn-add" href="{{ url_for('add_brands') }}" role="button">Add a brand</a>
-                </div>
-            </div>
-        </div>
 {% endblock %}
