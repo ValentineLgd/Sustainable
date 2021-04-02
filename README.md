@@ -171,6 +171,11 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         - the current shared catalogue by clicking on the "Sustainable brands" button of the navbar
         All updates are immediatly displayed inside both catalogues.
 
+* As a registered user, I want to be able to log out from my session when my contribution is over *
+As a registered user, the navbar offers the option to « Log out » from the session.
+After loging out, a message is displayed to confirm the logging out to the user.
+Then, the user is redirected to the log in page.
+
 *I especially tested twice the following features to be sure they work properly :*
 
 * _Responsive versions of the website :_
@@ -367,7 +372,7 @@ no errors were identified:
 
 ### 2. __Test UX__
 
-Details of the full test performed (with screenshots) on this project can be found [here](documentation/test/fulltest.pdf).
+Details of the full test performed (with screenshots) on this project can be found [here](documentation/tests/tests_ux.pdf).
 
 ## __Deployment__
 
