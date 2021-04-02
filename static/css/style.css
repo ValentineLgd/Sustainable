@@ -448,10 +448,7 @@ title h1 {
 .description-brand ul {
     margin-left:5%;
 }
-
-.form-position {
-    margin-left:0%;
-}}
+}
 
 @media only screen and (max-width: 992px) {
 .description-brand ul {
@@ -623,7 +620,8 @@ title h1 {
 }
 
 .form-position {
-    margin-left:15%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #query {
@@ -643,6 +641,7 @@ title h1 {
     border: 2px solid black;
     border-radius: 5px;
 }}
+
 
 /* Buttons */
 

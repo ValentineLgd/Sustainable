@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 description-brand">
                 <p class="align">For us, sustainable brands meet at least 2 criteria:
                     <ul>
@@ -25,18 +25,20 @@
                     </ul>
                 </p>
             </div>
-        </div>
-        <form class="form-inline" action="{{ url_for('search') }}" method="post"> 
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-12">
-                    <input type="text" name="query" id="query" minlength="3" class="validate form-position" required">
-                    <button type="submit" class="btn btn-small">
-                        <i class="fas fa-search left"></i>
-                    </button>
-                    <a class="btn btn-small" href="{{ url_for('get_brands') }}"><i class="fas fa-undo"></i></a>
-                </div>
+                <form class="form-inline" action="{{ url_for('search') }}" method="post"> 
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12">
+                            <input type="text" name="query" id="query" minlength="3" class="validate form-position" required">
+                            <button type="submit" class="btn btn-small">
+                                <i class="fas fa-search left"></i>
+                            </button>
+                            <a class="btn btn-small" href="{{ url_for('get_brands') }}"><i class="fas fa-undo"></i></a>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
     <div class="container-fluid">
         <ul>

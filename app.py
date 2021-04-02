@@ -113,7 +113,8 @@ def edit_brands(brand_id):
 
     brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_brands.html", brand=brand, categories=categories)
+    return render_template(
+        "edit_brands.html", brand=brand, categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -1,17 +1,22 @@
-# Sustainable
+# __Sustainable__
 
 Sustainable is a website aiming to serve as a database for sustainable clothes brands.
+
 In this website, user can share & discover sustainable brands to buy clothes that are
 respectful to the environment as well as to other human beings.
+
 In this website, users can complet' the current catalogue by creating new brands, updating
 the brands they previously added and, if needed, delete these brands. 
+
 Only registered users access to the create/edit/delete functionalities in order to 
 protect the website & the database from random users deleting/editing the work of others.
 
 ## **UX**
 
 This website is my third MileStone project for my Fullstack Software Develpment diploma.
+
 The aim of this website was to create a website implementing CRUD operations (Create, Read, Update, Delete).
+
 In my personal life, I already noticed how hard it was to find sustainables clothes brands
 that you can trust to buy clothes without hurting others or the planet. That's why I decided
 that a database gathering information freely accessible for everyone could be valuable.
@@ -48,7 +53,7 @@ in a destructive perspective by allowing only registered users to edit/delete th
 
 **_User experiences_**
 
-*As a customer, I want to navigate easily throught Sustainable :*
+*As a customer, I want to navigate easily throught Sustainable:*
 
 A navigation on the top right of the screen synthesis the main sections of the website : About, Sustainable brands, Log in or Register.
 
@@ -168,21 +173,24 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
 
 *I especially tested twice the following features to be sure they work properly :*
 
-_Responsive versions of the website :_
+* _Responsive versions of the website :_
 Phone: Moto G4, Galaxy S5, Pixel 2, Pixel 2 XL, Iphone 5/SE, Iphone 6/7/8, Iphone 6/7/8 Plus, Iphone X
 
-Tablet: Ipad, Ipad Pro, Surface Duo
+    Tablet: Ipad, Ipad Pro, Surface Duo
 
-Website tested throught Microsoft Edge and Chrome browsers
+* _Browsers_ : 
+    Website tested throught Microsoft Edge and Chrome browsers
 
-Logo text in navigation bar to be sure it brings the customer back to Sustainable website (i.e. about.html)
-About, Sustainable brands, Register, Log In, Manage catalogue (Add a brand & Edit your references) 
-in navigation bar to make sure links work properly and brings to the correct sections of the page
-Social Media icons in Footer to be sure they were correct links and open in another page
-Buttons in all pages to ensure they were displaying the correct pages
+* _Links_:
+    Logo text in navigation bar to be sure it brings the customer back to Sustainable website (i.e. about.html)
+    About, Sustainable brands, Register, Log In, Manage catalogue (Add a brand & Edit your references) 
+    in navigation bar to make sure links work properly and brings to the correct sections of the page
+    Social Media icons in Footer to be sure they were correct links and open in another page
+    Buttons in all pages to ensure they were displaying the correct pages
 
-Add/edit/delete functionalities & ask a few friends to test the functionalities on their side 
-to ensure its works & immediatly displayed inside the catalogue.
+* _CRUD functionalities_:
+    Add/read/edit/delete functionalities & ask a few friends to test the functionalities on their side 
+    to ensure its works & immediatly displayed inside the catalogue.
 
 ## **Design**
 
@@ -225,9 +233,150 @@ The idea was to get an idea of what sections I would build and what design
 I would roughly create. Wireframes were built regarding desktop, tablet and phone 
 versions:
 
-[TO ADD]
+TO FIX ! 
+[here](documentation/wireframes/ms3_wireframes.pdf).
 
 From the idea to the realization, a lot of changes have been performed - especially
 regarding the add of register/log in functionalities as I realized later on the project that 
 it would be necessary to protect to the database against vandalism.
+
+## __Features__
+
+1. __Existing Features__
+
+*__Navigation__* : 
+* I use the simple and clear navigation code suggests in __[Bootstrap](https://getbootstrap.com/)__. 
+All sections are presented to ease the user experience and direct to relevant links when clicked.
+
+*__Modals__*
+* I use the modal code suggests in __[Bootstrap](https://getbootstrap.com/)__. 
+
+*__Main content__* : 
+* I used __Javascript__ to :
+    - make sections of the website slide in to add some interactive effect to the navigation (About & Sustainable brands pages)
+    - make pop up modals appear when an action has been performed by the user, to deliver feedbacks 
+    (After adding, deleting, updating a brand, or registering/loging in)
+
+*__Form__* : 
+
+* I use a simple form template provided by __[Bootstrap](https://getbootstrap.com/)__ in the Contact us section.`
+
+*__CRUD__*
+After creating a relevant collection inside MongoDB to gather the database informations, 
+I used Python & flask to create a plateform allowing users to create, read, update & delete
+relevant data in order to create a useful shared catalogue.
+This code was largely inspired & adapted from the Mini project described in Code institute
+classes.
+* Create: The user can add a brand to the database base & view it inside the catalogue.
+* Read: Users can access the current catalogue gathering all users' additions.
+* Update: Registered users can update the brands they previously created.
+* Delete: Registered users can delete the brands they previously created.
+
+
+2. __Features left to implement__
+
+*__Favorite sections__* : I would like to add a favorite section where users can add
+his/her favorite brands.
+*__Help to the user who losts his password__* : I would like to add a functionality with
+a button "Forgot your password?" where the user could click to get his password
+sent back by email or by sending him/her a link to modify his/her password.
+
+
+## __Technologies used__
+
+* __HTML__:
+The project uses HTML to create the content of the website and his structure. 
+* __CSS__: 
+The project uses CSS for the design of the website 
+* __Javascript__:
+The project uses Javascript to add interactivity with the user.
+* __[JQuery](https://jquery.com/)__:
+The project uses JQuery to manipulate the DOM.
+* __[Bootstrap](https://getbootstrap.com/)__:
+The project uses Bootstrap in the overall design. Grid, navbar, form, modal and many other features described in the Features' section were coded from Bootstrap interface.
+* __[Fontawesome](https://fontawesome.com/)__:
+The project uses Fontawesome 
+    - in the footer to refer to 2 social networks (Youtube, Instagram) & phone/address information
+    - in the titles of pages to add an illustration of the pages' purpose that is visually appealing to the users 
+    - in register/log in pages to illustrate the data "username" & "password"
+    - in the search bar 
+* __[Googlefonts](https://fonts.google.com/)__:
+The project uses GoogleFonts to choose the two fonts family used for the design of this website (Lato and Indie Flower)
+
+* __[Heroku](https://www.heroku.com)__: Host of my full stack website.
+
+* __[Python](https://www.python.org/)__:
+
+    - __Python__ - My main Back-End programming language.
+
+    - __PyMongo__ - Python's API for MongoDB integration.
+
+
+* **Flask**
+
+    - __[Flask](https://flask.palletsprojects.com/en/1.1.x/)__ - Open-source micro framework for web development in Python
+
+    - __[Click](https://click.palletsprojects.com/en/7.x/)__ - A Python package to create command line interfaces.
+
+    - __[DNSpython](https://www.dnspython.org/)__ - Domain Name system toolkit used by Python
+
+    - __[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)__ - Useful to template in relation with Flask
+
+    - __[itsdangerous](https://itsdangerous.palletsprojects.com/en/1.1.x/)__ - Permits to cryptographically sign data
+
+    - __[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)__ - A CGI Library for Flask
+
+* __[MongoDB Atlas](https://www.mongodb.com/)__: Storage of my database.
+
+## __Tools used__
+
+* [Bootstrap](https://getbootstrap.com/)
+* [W3C HTML Validator](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [PEP8 Validator](http://pep8online.com/)
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/)
+
+## __Testing__
+
+### 1. __Testing tools used__
+
+*__W3C HTML Validator__* - I run my url website through the validator &
+no errors were identified:
+
+![html_validator](documentation/tests/html_w3c_test.png)
+
+*__W3C CSS Validator__*
+
+* I run my style.css code through the validator &
+no errors were identified:
+
+![css_validator](documentation/tests/css_w3c_test.png)
+
+*__PEP8 validator__* : 
+
+* I run my app.py Python's code through the validator &
+no errors were identified:
+
+![pep8_validator](documentation/tests/pep8_test.png)
+
+*__Chrome DevTools__* : 
+
+* No problems identified regarding design & responsiveness for the following devices:
+    * **Phone**: Moto G4, Galaxy S5, Pixel 2, Pixel 2 XL, Iphone 5/SE, Iphone 6/7/8, Iphone 6/7/8 Plus, Iphone X
+    * **Tablet**: Ipad, Ipad Pro, Surface Duo
+
+### 2. __Test UX__
+
+Details of the full test performed (with screenshots) on this project can be found [here](documentation/test/fulltest.pdf).
+
+## __Deployment__
+
+__Tools used to deploy__
+
+* Github
+* Heroku
+* Python3
+* MongoDB
+
+## __Credits__
 
