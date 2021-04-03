@@ -444,9 +444,9 @@ __2.__ Create a database in MongoDB
 
 __Import os:__
 > os.environ.setdefault("IP", "To be added by developer")
-> os.environ.setdefault("PORT", "To be added by developer")
-> os.environ.setdefault("SECRET_KEY", "To be added by developer")
-> os.environ.setdefault("MONGO_URI", "To be added by developer")
+os.environ.setdefault("PORT", "To be added by developer")
+os.environ.setdefault("SECRET_KEY", "To be added by developer")
+os.environ.setdefault("MONGO_URI", "To be added by developer")
 > os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
 
 __3.__ Type __python3 app.py__ to run the app
