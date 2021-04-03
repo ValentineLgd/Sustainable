@@ -115,8 +115,8 @@ This page is accessible by the button "Log In" in the navbar".
 Afte registering, the "Manage catalogue" page is displayed where the user can access his  
 own part of the catalogue, add new brands and/or delete/edit the one he previously added.
 
-* As a registered use, I want to be able to : *
-    - Add new brands, and/or:
+* *As a registered use, I want to be able to :*
+    - *Add new brands, and/or:*
 
         After registering, the "Manage catalogue" section appears for the users in the navbar &
         the page is displayed to them. 
@@ -133,7 +133,7 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         and inside his own current part of the catalogue. 
         A pop up message appears to confirm that the brand was added & the "Manage catalogue" page is displayed.
 
-    - Edit the brands the user previously added, and/or*
+    - *Edit the brands the user previously added, and/or*
     
         After registering, the "Manage catalogue" section appears for the users in the navbar &
         the page is displayed to them. 
@@ -149,7 +149,7 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         and inside his own current part of the catalogue.
         A pop up message appears to confirm the update to the user & the "Manage catalogue" page is displayed.
 
-    - Delete the brands the user previously added:
+    - *Delete the brands the user previously added:*
 
         After registering, the "Manage catalogue" section appears for the users in the navbar &
         the page is displayed to them. 
@@ -163,7 +163,7 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         
         A pop up message appears to confirm the deletion to the user & the "Manage catalogue" page is displayed.
 
-    - Access the current catalogue, including the brands the user added and/or updated
+    - *Access the current catalogue, including the brands the user added and/or updated*
 
         As a registered user, I can access :
         - my own part of the catalogue with the brands I added, by clicking on the dropdwn button 
@@ -171,7 +171,8 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         - the current shared catalogue by clicking on the "Sustainable brands" button of the navbar
         All updates are immediatly displayed inside both catalogues.
 
-* As a registered user, I want to be able to log out from my session when my contribution is over *
+* *As a registered user, I want to be able to log out from my session when my contribution is over*
+
 As a registered user, the navbar offers the option to « Log out » from the session.
 After loging out, a message is displayed to confirm the logging out to the user.
 Then, the user is redirected to the log in page.
@@ -239,7 +240,7 @@ I would roughly create. Wireframes were built regarding desktop, tablet and phon
 versions:
 
 TO FIX ! 
-[here](documentation/wireframes/ms3_wireframes.pdf).
+[here](documentation/wireframes/ms3_wireframes.pdf)
 
 From the idea to the realization, a lot of changes have been performed - especially
 regarding the add of register/log in functionalities as I realized later on the project that 
@@ -272,10 +273,10 @@ I used Python & flask to create a plateform allowing users to create, read, upda
 relevant data in order to create a useful shared catalogue.
 This code was largely inspired & adapted from the Mini project described in Code institute
 classes.
-* Create: The user can add a brand to the database base & view it inside the catalogue.
-* Read: Users can access the current catalogue gathering all users' additions.
-* Update: Registered users can update the brands they previously created.
-* Delete: Registered users can delete the brands they previously created.
+* __Create__: The user can add a brand to the database base & view it inside the catalogue.
+* __Read__: Users can access the current catalogue gathering all users' additions.
+* __Update__: Registered users can update the brands they previously created.
+* __Delete__: Registered users can delete the brands they previously created.
 
 
 2. __Features left to implement__
@@ -385,3 +386,29 @@ __Tools used to deploy__
 
 ## __Credits__
 
+__Content__: 
+
+Texts were written by myself to fit with this website's goals.
+
+Nonetheless brands' description inside the catalogue were mainly
+inspired from an article of [Wedressfair](https://www.wedressfair.fr/blog/29-marques-ethiques-pour-un-dressing-responsable)
+
+__Images__:
+
+All images used in this website come from [Pixabay](https://pixabay.com/fr/)
+
+__Acknowledgements:__
+
+Eventually I received help for my code by reading answers from questions on the websites:
+
+* [W3schools.com](https://www.w3schools.com/)
+
+* [Stack Overflow](https://stackoverflow.com/) - especially : 
+    - to customize the dropdown button in the navbar ([here](https://stackoverflow.com/questions/49204071/how-to-change-navbar-dropdown-click-color-bootstrap-using-bootswatch-theme))
+
+* [To the new - Blog](https://www.tothenew.com/):
+    - to make div/sections slide down inside the screen ([here](https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/))
+
+* [Code Institute](https://codeinstitute.net/) - especially :
+    - the Python code used for CRUD operations from the Mini Project
+    - the hero image code adapted from the Mini Project - Love running

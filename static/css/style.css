@@ -437,6 +437,14 @@ title h1 {
     padding-bottom:20%;
 }
 
+.frame-col-manage {
+    min-height:450px;
+}
+
+.createdby {
+    padding-bottom:25px;
+}
+
 .base {
     margin-top:30%;
 }
