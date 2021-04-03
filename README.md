@@ -374,7 +374,7 @@ no errors were identified:
 
 ### 2. __Test UX__
 
-Details of the full test performed (with screenshots) on this project can be found [here](/workspace/Sustainable/documentation/tests/tests_ux.pdf).
+Details of the full test performed (with screenshots) on this project can be found [here](/documentation/tests/tests_ux.pdf).
 
 ## __Deployment__
 
