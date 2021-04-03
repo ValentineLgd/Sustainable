@@ -237,10 +237,9 @@ I used Balsamic to build my wireframe prior to the website coding.
 
 The idea was to get an idea of what sections I would build and what design 
 I would roughly create. Wireframes were built regarding desktop, tablet and phone 
-versions:
+versions: 
 
-TO FIX ! 
-[here](documentation/wireframes/ms3_wireframes.pdf)
+* [Balsamic Wireframes (desktop, tablet, phone)](/workspace/Sustainable/documentation/wireframes/ms3_wireframes.pdf)
 
 From the idea to the realization, a lot of changes have been performed - especially
 regarding the add of register/log in functionalities as I realized later on the project that 
@@ -373,7 +372,7 @@ no errors were identified:
 
 ### 2. __Test UX__
 
-Details of the full test performed (with screenshots) on this project can be found [here](documentation/tests/tests_ux.pdf).
+Details of the full test performed (with screenshots) on this project can be found [here](/workspace/Sustainable/documentation/tests/tests_ux.pdf).
 
 ## __Deployment__
 
@@ -441,9 +440,13 @@ __2.__ Create a database in MongoDB
 
 __Import os:__
 > os.environ.setdefault("IP", "To be added by developer")
+
 > os.environ.setdefault("PORT", "To be added by developer")
+
 > os.environ.setdefault("SECRET_KEY", "To be added by developer")
+
 > os.environ.setdefault("MONGO_URI", "To be added by developer")
+
 > os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
 
 __3.__ Type python3 app.py to run the app
@@ -465,15 +468,17 @@ __Heroku Deployment__
 
 4. Push the requirements.txt and Procfile to repository
 >$ git add requirements.txt
+
 >$ git commit -m "Add requirements.txt"
 
 >$ git add Procfile 
+
 >$ git commit -m "Add Procfile"
 
 5. Go to the deploy tab in Heroku and scroll down to Automatic deployments. 
 Click on Enable Automatic Deploys. By Manual deploy click on Deploy Branch.
 
-The app wil open. The live link is available from the address bar.
+The app opens. The live link is available from the top button on the right.
 
 ## __Credits__
 
@@ -508,5 +513,5 @@ Eventually I received help for my code by reading answers from questions on the 
     - to make div/sections slide down inside the screen ([here](https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/))
 
 * [Code Institute](https://codeinstitute.net/) - especially :
-    - the Python code used for CRUD operations from the Mini Project
-    - the hero image code adapted from the Mini Project - Love running
+    - the Python code used to implement CRUD operations from the Mini Project (Data centric development module)
+    - the Hero image code adapted from the Mini Project - Love running (CSS Fundamentals module)
