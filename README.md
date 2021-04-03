@@ -115,7 +115,7 @@ This page is accessible by the button "Log In" in the navbar".
 Afte registering, the "Manage catalogue" page is displayed where the user can access his  
 own part of the catalogue, add new brands and/or delete/edit the one he previously added.
 
-* *As a registered use, I want to be able to :*
+*As a registered use, I want to be able to :*
     - *Add new brands, and/or:*
 
         After registering, the "Manage catalogue" section appears for the users in the navbar &
@@ -171,7 +171,7 @@ own part of the catalogue, add new brands and/or delete/edit the one he previous
         - the current shared catalogue by clicking on the "Sustainable brands" button of the navbar
         All updates are immediatly displayed inside both catalogues.
 
-* *As a registered user, I want to be able to log out from my session when my contribution is over*
+*As a registered user, I want to be able to log out from my session when my contribution is over*
 
 As a registered user, the navbar offers the option to « Log out » from the session.
 After loging out, a message is displayed to confirm the logging out to the user.
