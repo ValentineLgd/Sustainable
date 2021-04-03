@@ -240,7 +240,7 @@ The idea was to get an idea of what sections I would build and what design
 I would roughly create. Wireframes were built regarding desktop, tablet and phone 
 versions: 
 
-* [Balsamic Wireframes (desktop, tablet, phone)](/workspace/Sustainable/documentation/wireframes/ms3_wireframes.pdf)
+* [Balsamic Wireframes (desktop, tablet, phone)](/documentation/wireframes/ms3_wireframes.pdf)
 
 From the idea to the realization, a lot of changes have been performed - especially
 regarding the add of register/log in functionalities as I realized later on the project that 
@@ -444,9 +444,13 @@ __2.__ Create a database in MongoDB
 
 __Import os:__
 > os.environ.setdefault("IP", "To be added by developer")
-os.environ.setdefault("PORT", "To be added by developer")
-os.environ.setdefault("SECRET_KEY", "To be added by developer")
-os.environ.setdefault("MONGO_URI", "To be added by developer")
+
+> os.environ.setdefault("PORT", "To be added by developer")
+
+> os.environ.setdefault("SECRET_KEY", "To be added by developer")
+
+> os.environ.setdefault("MONGO_URI", "To be added by developer")
+
 > os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
 
 __3.__ Type __python3 app.py__ to run the app
@@ -470,8 +474,11 @@ __Heroku Deployment__
 
 4. Push the requirements.txt and Procfile to repository
 >$ git add requirements.txt
+
 >$ git commit -m "Add requirements.txt"
+
 >$ git add Procfile 
+
 >$ git commit -m "Add Procfile"
 
 5. Go to the deploy tab in Heroku and scroll down to Automatic deployments. 
