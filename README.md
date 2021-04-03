@@ -115,61 +115,62 @@ This page is accessible by the button "Log In" in the navbar".
 Afte registering, the "Manage catalogue" page is displayed where the user can access his  
 own part of the catalogue, add new brands and/or delete/edit the one he previously added.
 
-*As a registered use, I want to be able to :*
-    - *Add new brands, and/or:*
+*As a registered user, I want to be able to :*
 
-        After registering, the "Manage catalogue" section appears for the users in the navbar &
-        the page is displayed to them. 
+1) *Add new brands, and/or:*
+
+    After registering, the "Manage catalogue" section appears for the users in the navbar &
+    the page is displayed to them. 
         
-        Register users can then add a brand by clicking on the "Add a brand" button displayed inside
-        the "Manage catalogue" page or by clicking on the dropdown "Manage catalogue" button of the navbar
-        and chosing "Add a brand".
+    Register users can then add a brand by clicking on the "Add a brand" button displayed inside
+    the "Manage catalogue" page or by clicking on the dropdown "Manage catalogue" button of the navbar
+    and chosing "Add a brand".
         
-        The Add page is therefore displayed where the user has to provide relevant information regarding the brand
-        (location, name, website, description, category). Every information is required as it provides useful information
-        to users.
+    The Add page is therefore displayed where the user has to provide relevant information regarding the brand
+    (location, name, website, description, category). Every information is required as it provides useful information
+    to users.
 
-        By clicking on "Confirm", the brand is created & displayed inside the current shared catalogue "Sustainable brands"
-        and inside his own current part of the catalogue. 
-        A pop up message appears to confirm that the brand was added & the "Manage catalogue" page is displayed.
+    By clicking on "Confirm", the brand is created & displayed inside the current shared catalogue "Sustainable brands"
+    and inside his own current part of the catalogue. 
+    A pop up message appears to confirm that the brand was added & the "Manage catalogue" page is displayed.
 
-    - *Edit the brands the user previously added, and/or*
+2) *Edit the brands the user previously added, and/or*
     
-        After registering, the "Manage catalogue" section appears for the users in the navbar &
-        the page is displayed to them. 
+    After registering, the "Manage catalogue" section appears for the users in the navbar &
+    the page is displayed to them. 
         
-        Register users can then edit a brand by clicking on the "Edit" button displayed inside
-        the "Manage catalogue" page for every brands previously added, or by clicking on the dropdown "Manage catalogue" button of the navbar
-        and chosing "Edit your references".
+    Register users can then edit a brand by clicking on the "Edit" button displayed inside
+    the "Manage catalogue" page for every brands previously added, or by clicking on the dropdown "Manage catalogue" button of the navbar
+    and chosing "Edit your references".
         
-        The Edit page is therefore displayed where the user can edit the previous information regarding the brand
-        (location, name, website, description, category).
+    The Edit page is therefore displayed where the user can edit the previous information regarding the brand
+    (location, name, website, description, category).
         
-        By clicking on "Confirm", the brand is updated & the update is displayed inside the current shared catalogue "Sustainable brands"
-        and inside his own current part of the catalogue.
-        A pop up message appears to confirm the update to the user & the "Manage catalogue" page is displayed.
+    By clicking on "Confirm", the brand is updated & the update is displayed inside the current shared catalogue "Sustainable brands"
+    and inside his own current part of the catalogue.
+    A pop up message appears to confirm the update to the user & the "Manage catalogue" page is displayed.
 
-    - *Delete the brands the user previously added:*
+3) *Delete the brands the user previously added:*
 
-        After registering, the "Manage catalogue" section appears for the users in the navbar &
-        the page is displayed to them. 
+    After registering, the "Manage catalogue" section appears for the users in the navbar &
+    the page is displayed to them. 
         
-        Register users can then delete a brand by clicking on the "Delete" button displayed inside
-        the "Manage catalogue" page for every brands previously added, or by clicking on the dropdown "Manage catalogue" button of the navbar
-        and chosing "Edit your references".
+    Register users can then delete a brand by clicking on the "Delete" button displayed inside
+    the "Manage catalogue" page for every brands previously added, or by clicking on the dropdown "Manage catalogue" button of the navbar
+    and chosing "Edit your references".
         
-        By clicking on "Confirm", the brand is deleted & the update is displayed inside the current shared catalogue "Sustainable brands"
-        and inside his own current part of the catalogue.
+    By clicking on "Confirm", the brand is deleted & the update is displayed inside the current shared catalogue "Sustainable brands"
+    and inside his own current part of the catalogue.
         
-        A pop up message appears to confirm the deletion to the user & the "Manage catalogue" page is displayed.
+    A pop up message appears to confirm the deletion to the user & the "Manage catalogue" page is displayed.
 
-    - *Access the current catalogue, including the brands the user added and/or updated*
+4) *Access the current catalogue, including the brands the user added and/or updated*
 
-        As a registered user, I can access :
-        - my own part of the catalogue with the brands I added, by clicking on the dropdwn button 
-        of the navbar "Manage catalogue" and then "Edit your references" 
-        - the current shared catalogue by clicking on the "Sustainable brands" button of the navbar
-        All updates are immediatly displayed inside both catalogues.
+    As a registered user, I can access :
+    - my own part of the catalogue with the brands I added, by clicking on the dropdwn button 
+    of the navbar "Manage catalogue" and then "Edit your references" 
+    - the current shared catalogue by clicking on the "Sustainable brands" button of the navbar
+    All updates are immediatly displayed inside both catalogues.
 
 *As a registered user, I want to be able to log out from my session when my contribution is over*
 
@@ -224,10 +225,10 @@ as it offers a wide catalogue of icons.
 
 ## **Frameworks**
 
-1. _Flask_ : A framework written in Python that gives a lot of flexibility to the coding
-2. _Bootstrap_ : I decided to stick to bootstrap as I find some of the functionalities
+1. __[Flask](https://flask.palletsprojects.com/en/1.1.x/)__ : A framework written in Python that gives a lot of flexibility to the coding
+2. __[Bootstrap](https://getbootstrap.com/)__ : I decided to stick to bootstrap as I find some of the functionalities
 really easy & handy to use and like his overall design & flexibility.
-2. _JQuery_ : I used some JQuery codes to enhance the interacte effect of the website
+2. __[JQuery](https://jquery.com/)__ : I used some JQuery codes to enhance the interacte effect of the website
 by making div slide in while the user discovers the website. The code I used where
 definetely adapted from the current source : [TO ADD]
 
@@ -257,7 +258,7 @@ All sections are presented to ease the user experience and direct to relevant li
 * I use the modal code suggests in __[Bootstrap](https://getbootstrap.com/)__. 
 
 *__Main content__* : 
-* I used __Javascript__ to :
+* I used __[Javascript](https://www.javascript.com/)__ to :
     - make sections of the website slide in to add some interactive effect to the navigation (About & Sustainable brands pages)
     - make pop up modals appear when an action has been performed by the user, to deliver feedbacks 
     (After adding, deleting, updating a brand, or registering/loging in)
@@ -293,7 +294,7 @@ sent back by email or by sending him/her a link to modify his/her password.
 The project uses HTML to create the content of the website and his structure. 
 * __CSS__: 
 The project uses CSS for the design of the website 
-* __Javascript__:
+* __[Javascript](https://www.javascript.com/)__:
 The project uses Javascript to add interactivity with the user.
 * __[JQuery](https://jquery.com/)__:
 The project uses JQuery to manipulate the DOM.
@@ -382,10 +383,10 @@ Juan Stelling [project](https://github.com/juanstelling/MS3_breaktasty).
 
 __Tools used to deploy__
 
-* Github
-* Heroku
-* Python3
-* MongoDB
+* __[Github](https://github.com/)__
+* __[Heroku](ttps://heroku.com)__
+* __[Python3](https://www.python.org/downloads/)__
+* __[MongoDB](https://www.mongodb.com/)__
 
 __Clone the project__
 
@@ -396,7 +397,7 @@ To make a local clone:
 
 __Working with a local copy__
 
-__1.__ In the workspace of the local copy, type in the terminal window: pip3 install -r requirements.txt.
+__1.__ In the workspace of the local copy, type in the terminal window: __pip3 install -r requirements.txt__.
 
 __2.__ Create a database in MongoDB
 * Login to the MongoDB account.
@@ -405,38 +406,40 @@ __2.__ Create a database in MongoDB
 * Add following values to the three collections:
     - For __brands collection__:
         
-        1) _id: ObjectId
-        2) country : string
-        3) brand_name : string
+        __1)__ _id: ObjectId
         
-        4) category_name: string
+        __2)__ country : string
         
-        5) description: string
+        __3)__ brand_name : string
         
-        6) website: string
+        __4)__ category_name: string
         
-        7) created_by: string
+        __5)__ description: string
+        
+        __6)__ website: string
+        
+        __7)__ created_by: string
 
     - For __categories collection__:
 
-        1) _id: ObjectId
+        __1)__ _id: ObjectId
     
-        2) category_name: string
+        __2)__ category_name: string
     
     - For __users collection__:
-        1) _id: ObjectId
+        __1)__ _id: ObjectId
 
-        2) username: string
+        __2)__ username: string
         
-        3) password: string
+        __3)__ password: string
 
 * Create the environment variables
 
-* Create a .gitignore file in the root directory of the project.
+* Create a __.gitignore__ file in the root directory of the project.
 
-* Add the env.py file in the .gitignore.
+* Add the __env.py__ file in the .gitignore.
 
-* Create the file env.py to contain environment variables.
+* Create the file __env.py__ to contain environment variables.
 
 __Import os:__
 > os.environ.setdefault("IP", "To be added by developer")
@@ -449,14 +452,14 @@ __Import os:__
 
 > os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
 
-__3.__ Type python3 app.py to run the app
+__3.__ Type __python3 app.py__ to run the app
 
 __Heroku Deployment__
 
 1. Set up local workspace for Heroku
 
-    - In terminal window type: pip3 freeze -- local > requirements.txt. 
-    - In termial window type: python app.py > Procfile 
+    - In terminal window type: __pip3 freeze -- local > requirements.txt.__ 
+    - In termial window type: __python app.py > Procfile__
 
 2. Set up Heroku: create a Heroku account & a new app 
 
@@ -464,7 +467,7 @@ __Heroku Deployment__
 
     * Connect to GitHub in the deploy section in Heroku: Search the repository to connect with. (Click on connect)
     * Go to the settings in Heroku & to Config Vars > Reveal Config Vars:
-    Enter your env.py variables: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+    Enter your env.py variables: __IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME__
 
 4. Push the requirements.txt and Procfile to repository
 >$ git add requirements.txt
@@ -509,7 +512,7 @@ Eventually I received help for my code by reading answers from questions on the 
 * [Stack Overflow](https://stackoverflow.com/) - especially : 
     - to customize the dropdown button in the navbar ([here](https://stackoverflow.com/questions/49204071/how-to-change-navbar-dropdown-click-color-bootstrap-using-bootswatch-theme))
 
-* [To the new - Blog](https://www.tothenew.com/):
+* [To The New blog](https://www.tothenew.com/):
     - to make div/sections slide down inside the screen ([here](https://www.tothenew.com/blog/slide-in-animation-while-scrolling-page/))
 
 * [Code Institute](https://codeinstitute.net/) - especially :
