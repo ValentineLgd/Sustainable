@@ -85,12 +85,12 @@ In this page, current catalogue including sustainable brands added by all users 
 quick description*
 
 In the Sustainable brands page, all brands are displayed and each of them is quickly described by providing their:
-- *name of the brand*
-- *location*
-- *website* : clicking on it would open a new page directing the user to the brand's website
-- *category* : is this brand for men/women or for both? While most of them are for both sexes, 
+- __name of the brand__
+- __location__
+- __website__ : clicking on it would open a new page directing the user to the brand's website
+- __category__ : is this brand for men/women or for both? While most of them are for both sexes, 
 it can be handy to get this information.
-- *description* : the user adding the brand has to describe the brand in a few sentences explaining
+- __description__ : the user adding the brand has to describe the brand in a few sentences explaining
 why he loves it & what the brand offers.
 
 When each brand is added by a user, these 5 catagories are required in order for the brand to be added to the catalogue.
@@ -214,9 +214,9 @@ value to the current catalogue).
 **_Typography_**
 
 Regarding the typography, I decided to use 2 Google fonts :
-- Indie Flower : because of his young, and natural effect, as it reproduces human 
+- __Indie Flower__ : because of his young, and natural effect, as it reproduces human 
 writing;
-- Lato : to contrast with the round effect given by Indie Flower & give more substance
+- __Lato__ : to contrast with the round effect given by Indie Flower & give more substance
 to the paragraph with a more classic typography.
 
 **_Icons_**
@@ -268,7 +268,8 @@ All sections are presented to ease the user experience and direct to relevant li
 * I use a simple form template provided by __[Bootstrap](https://getbootstrap.com/)__ in the Contact us section.`
 
 *__CRUD__*
-After creating a relevant collection inside MongoDB to gather the database informations, 
+
+After creating a relevant collection inside __[MongoDB](https://www.mongodb.com/)__ to gather the database informations, 
 I used Python & flask to create a plateform allowing users to create, read, update & delete
 relevant data in order to create a useful shared catalogue.
 This code was largely inspired & adapted from the Mini project described in Code institute
@@ -332,7 +333,7 @@ The project uses GoogleFonts to choose the two fonts family used for the design 
 
     - __[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)__ - A CGI Library for Flask
 
-* __[MongoDB Atlas](https://www.mongodb.com/)__: Storage of my database.
+* __[MongoDB](https://www.mongodb.com/)__: Storage of my database.
 
 ## __Tools used__
 
@@ -384,7 +385,7 @@ Juan Stelling [project](https://github.com/juanstelling/MS3_breaktasty).
 __Tools used to deploy__
 
 * __[Github](https://github.com/)__
-* __[Heroku](ttps://heroku.com)__
+* __[Heroku](https://www.heroku.com)__
 * __[Python3](https://www.python.org/downloads/)__
 * __[MongoDB](https://www.mongodb.com/)__
 
@@ -443,13 +444,9 @@ __2.__ Create a database in MongoDB
 
 __Import os:__
 > os.environ.setdefault("IP", "To be added by developer")
-
 > os.environ.setdefault("PORT", "To be added by developer")
-
 > os.environ.setdefault("SECRET_KEY", "To be added by developer")
-
 > os.environ.setdefault("MONGO_URI", "To be added by developer")
-
 > os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
 
 __3.__ Type __python3 app.py__ to run the app
@@ -467,15 +464,14 @@ __Heroku Deployment__
 
     * Connect to GitHub in the deploy section in Heroku: Search the repository to connect with. (Click on connect)
     * Go to the settings in Heroku & to Config Vars > Reveal Config Vars:
-    Enter your env.py variables: __IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME__
+    Enter your env.py variables: 
+    
+    __IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME__
 
 4. Push the requirements.txt and Procfile to repository
 >$ git add requirements.txt
-
 >$ git commit -m "Add requirements.txt"
-
 >$ git add Procfile 
-
 >$ git commit -m "Add Procfile"
 
 5. Go to the deploy tab in Heroku and scroll down to Automatic deployments. 
