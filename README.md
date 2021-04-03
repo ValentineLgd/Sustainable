@@ -377,12 +377,103 @@ Details of the full test performed (with screenshots) on this project can be fou
 
 ## __Deployment__
 
+Because of their clarity & transparence,
+I widely adapted this section from the README of 
+Juan Stelling [project](https://github.com/juanstelling/MS3_breaktasty).
+
 __Tools used to deploy__
 
 * Github
 * Heroku
 * Python3
 * MongoDB
+
+__Clone the project__
+
+To make a local clone:
+
+* Log in to GitHub and go to the repository.
+* Click on the “Code” button.
+
+__Working with a local copy__
+
+__1.__ In the workspace of the local copy, type in the terminal window: pip3 install -r requirements.txt.
+
+__2.__ Create a database in MongoDB
+* Login to the MongoDB account.
+* Create a cluster and a database.
+* Create collections inside the database: brands, categories, users.
+* Add following values to the three collections:
+    - For __brands collection__:
+        
+        1) _id: ObjectId
+        2) country : string
+        3) brand_name : string
+        
+        4) category_name: string
+        
+        5) description: string
+        
+        6) website: string
+        
+        7) created_by: string
+
+    - For __categories collection__:
+
+        1) _id: ObjectId
+    
+        2) category_name: string
+    
+    - For __users collection__:
+        1) _id: ObjectId
+
+        2) username: string
+        
+        3) password: string
+
+* Create the environment variables
+
+* Create a .gitignore file in the root directory of the project.
+
+* Add the env.py file in the .gitignore.
+
+* Create the file env.py to contain environment variables.
+
+__Import os:__
+> os.environ.setdefault("IP", "To be added by developer")
+> os.environ.setdefault("PORT", "To be added by developer")
+> os.environ.setdefault("SECRET_KEY", "To be added by developer")
+> os.environ.setdefault("MONGO_URI", "To be added by developer")
+> os.environ.setdefault("MONGO_DBNAME", "To be added by developer")
+
+__3.__ Type python3 app.py to run the app
+
+__Heroku Deployment__
+
+1. Set up local workspace for Heroku
+
+    - In terminal window type: pip3 freeze -- local > requirements.txt. 
+    - In termial window type: python app.py > Procfile 
+
+2. Set up Heroku: create a Heroku account & a new app 
+
+3. Deployment on Github
+
+    * Connect to GitHub in the deploy section in Heroku: Search the repository to connect with. (Click on connect)
+    * Go to the settings in Heroku & to Config Vars > Reveal Config Vars:
+    Enter your env.py variables: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+
+4. Push the requirements.txt and Procfile to repository
+>$ git add requirements.txt
+>$ git commit -m "Add requirements.txt"
+
+>$ git add Procfile 
+>$ git commit -m "Add Procfile"
+
+5. Go to the deploy tab in Heroku and scroll down to Automatic deployments. 
+Click on Enable Automatic Deploys. By Manual deploy click on Deploy Branch.
+
+The app wil open. The live link is available from the address bar.
 
 ## __Credits__
 
@@ -396,6 +487,13 @@ inspired from an article of [Wedressfair](https://www.wedressfair.fr/blog/29-mar
 __Images__:
 
 All images used in this website come from [Pixabay](https://pixabay.com/fr/)
+
+__README.md__:
+
+Because of their clarity & transparence,
+I widely adapted this section from the README of 
+Juan Stelling [project](https://github.com/juanstelling/MS3_breaktasty).
+
 
 __Acknowledgements:__
 
